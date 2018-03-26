@@ -1,0 +1,11 @@
+.btn {
+    display: block;
+    border: 1px solid #48c23d;
+    padding: 5px;
+    text-align: center;
+    margin: 5px 0;
+}
+.hd {
+    font-size: 40px;
+    font-weight: bold;
+}

@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/single/single",
+    "pages/multi/multi",
+    "pages/live/live"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "播放器demo",
+    "navigationBarBackgroundColor": "#fff",
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": true
+  },
+  "networkTimeout": {
+    "request": 30000,
+    "connectSocket": 30000,
+    "uploadFile": 30000,
+    "downloadFile": 30000
+  },
+  "tabBar": {
+    "color": "#222",
+    "backgroundColor": "#fff",
+    "selectedColor": "#FF7000",
+    "borderStyle": "black",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/single/single",
+        "text": "单视频"
+      },
+      {
+        "pagePath": "pages/multi/multi",
+        "text": "多视频"
+      }
+    ]
+  },
+  "debug": true,
+
+  "plugins": {
+    "tencentvideo": {
+      "version": "1.0.2",
+      "provider": "wxa75efa648b60994b"
+    }
+  }
+}
