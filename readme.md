@@ -7,13 +7,14 @@
 ```
 本github仓库即使用`腾讯视频小程序播放插件`的一个示例项目
 
+
 ## 接入方式
 
 ### 申请使用插件 appid:wxa75efa648b60994b
 首先，参见微信官方的[插件使用文档](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/plugin/using.html)申请插件权限，在申请使用插件的使用时，填写以下appid:`wxa75efa648b60994b`
 
 ### 引入插件代码
-参见官方文档即可
+参见官方文档即可，目前最新版本为：*1.0.0*
 
 ### 使用播放器组件
 wxml
@@ -24,6 +25,13 @@ wxml
   autoplay="{{true}}" // 是否自动播放
 ></txv-video>
 ```
+组件元素支持的属性:
+* `vid` 视频id
+* `playerid` 播放器标识符
+* `autoplay` 是否自动播放
+* `bindtimeupdate` 播放进度更新事件，`1.0.2`后支持
+* `bindstatechange` 播放状态变更事件，`1.0.2`后支持
+* `binderror` 错误信息，`1.0.2`后支持
 
 ### 插件 js api
 ```
