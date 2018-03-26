@@ -8,9 +8,9 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "1.9.3",
+	"libVersion": "1.9.93",
 	"appid": "wxee48e83a9ce5cef8",
-	"projectname": "miniprogram",
+	"projectname": "miniprogram-plugin",
 	"isGameTourist": false,
 	"condition": {
 		"search": {

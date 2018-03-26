@@ -1,8 +1,7 @@
 {
   "pages": [
     "pages/single/single",
-    "pages/multi/multi",
-    "pages/live/live"
+    "pages/multi/multi"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -39,7 +38,7 @@
 
   "plugins": {
     "tencentvideo": {
-      "version": "1.0.2",
+      "version": "1.0.0",
       "provider": "wxa75efa648b60994b"
     }
   }
