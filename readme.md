@@ -8,13 +8,13 @@
 
 ## 接入方式
 
-#### 申请使用插件 appid:wxa75efa648b60994b
+### 申请使用插件 appid:wxa75efa648b60994b
 首先，参见微信官方的[插件使用文档](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/plugin/using.html)申请插件权限，在申请使用插件的使用时，填写以下appid:`wxa75efa648b60994b`
 
-#### 引入插件代码
+### 引入插件代码
 参见官方文档即可
 
-#### 使用播放器组件
+### 使用播放器组件
 wxml
 ```
 <txv-video 
@@ -24,7 +24,7 @@ wxml
 ></txv-video>
 ```
 
-#### 插件 js api
+### 插件 js api
 ```
 const TxvContext = requirePlugin("tencentvideo");
 
