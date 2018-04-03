@@ -14,7 +14,7 @@
 首先，参见微信官方的[插件使用文档](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/plugin/using.html)申请插件权限，在申请使用插件的使用时，填写以下appid:`wxa75efa648b60994b`
 
 ### 引入插件代码
-参见官方文档即可，目前最新版本为：*1.0.0*
+参见官方文档即可，目前最新版本为：*1.0.2*
 
 ### 使用播放器组件
 wxml
