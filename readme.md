@@ -13,6 +13,8 @@
 ### 申请使用插件 appid:wxa75efa648b60994b
 首先，参见微信官方的[插件使用文档](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/plugin/using.html)申请插件权限，在申请使用插件的使用时，填写以下appid:`wxa75efa648b60994b`
 
+如果您不是通过社交渠道找到我们再申请接入的话，请在本仓库里提一个issue留下你的联系方式（qq/微信）及appid，以便后续联系。如果不留的话，可能不会给你们通过。
+
 ### 引入插件代码
 参见官方文档即可，目前最新版本为：*1.0.2*
 
