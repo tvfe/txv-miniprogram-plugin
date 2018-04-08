@@ -36,6 +36,6 @@ Page({
 		this.txvContext.exitFullScreen();
 	},
 	playrate: function (e) {
-	    this.txvContext.playbackRate(+e.currentTarget.dataset.rate);
+		this.txvContext.playbackRate(+e.currentTarget.dataset.rate);
 	}
 });
