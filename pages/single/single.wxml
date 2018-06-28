@@ -1,5 +1,5 @@
 <view hidden="{{tvphide}}">
-    <txv-video vid="e0354z3cqjp" playerid="txv1" autoplay="{{true}}"></txv-video>
+    <txv-video vid="e0354z3cqjp" playerid="txv1" autoplay="{{false}}"></txv-video>
 </view>
 <view class="control">
     <view class="btn" bindtap="hehe">特殊测试用</view>
