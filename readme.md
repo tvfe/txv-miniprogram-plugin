@@ -24,6 +24,7 @@ wxml
 <txv-video 
   vid="e0354z3cqjp"   // 可使用vid="{{vid}}"的方式应用data变量
   playerid="txv1" 
+  height="{{'600px'}}" // 自定义高度
   autoplay="{{true}}" // 是否自动播放
 ></txv-video>
 ```
@@ -31,6 +32,7 @@ wxml
 * `vid` 视频id
 * `playerid` 播放器标识符
 * `autoplay` 是否自动播放
+* `height` 高度设置
 * `bindtimeupdate` 播放进度更新事件，`1.0.3`后支持
 * `bindstatechange` 播放状态变更事件，`1.0.3`后支持
 * `binderror` 错误信息，`1.0.3`后支持
