@@ -1,0 +1,40 @@
+
+.player_error_layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .75);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    z-index: 2;
+    font-size: 15px;
+}
+
+.btn {
+    display: block;
+    border: 1px solid #48c23d;
+    padding: 5px;
+    text-align: center;
+    margin: 5px 0;
+}
+.hd {
+    font-size: 40px;
+    font-weight: bold;
+}
+.mod_player {
+    position: relative;
+}
+.block {
+    height: 40px;
+    line-height: 40px;
+    background: white;
+    text-align: center;
+    vertical-align: middle;
+}

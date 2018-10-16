@@ -1,0 +1,35 @@
+<view hidden="{{tvphide}}">
+    <txv-live 
+        sid="103022403" 
+        pid="1825"
+        playerid="txv8" 
+        autoplay="{{true}}"
+    ></txv-live>
+</view>
+<view class="block">------------丰姿绰约分割线-----------</view>
+<view hidden="{{tvphide}}">
+    <txv-live 
+        sid="103022403" 
+        pid="1825"
+        playerid="txv9" 
+        autoplay="{{false}}"
+    ></txv-live>
+</view>
+<view class="block">------------丰姿绰约分割线-----------</view>
+<view hidden="{{tvphide}}">
+    <txv-live 
+        sid="103022403" 
+        pid="1825"
+        playerid="txv10" 
+        autoplay="{{false}}"
+    ></txv-live>
+</view>
+<view class="block">------------丰姿绰约分割线-----------</view>
+<view hidden="{{tvphide}}">
+    <txv-live 
+        sid="103022403" 
+        pid="1825"
+        playerid="txv11" 
+        autoplay="{{false}}"
+    ></txv-live>
+</view>

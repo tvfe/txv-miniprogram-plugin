@@ -1,14 +1,44 @@
 <view hidden="{{tvphide}}">
-    <txv-video vid="e0354z3cqjp" playerid="txv1" autoplay="{{false}}"></txv-video>
+    <txv-video 
+        vid="{{vid}}" 
+        width="{{width}}"
+        height="{{height}}"
+        playerid="txv0" 
+        autoplay="{{autoplay}}"
+        controls="{{controls}}"
+        bindstatechange="onStateChange"
+        bindtimeupdate="onTimeUpdate"
+        showProgress="{{showProgress1}}"
+        options="{{options}}"
+        show-progress="{{false}}"
+        bindfullscreenchange="onFullScreenChange">
+        // 支持slot，用于在video上显示UI
+        <cover-view class='txv-video-slot'>video slot</cover-view>
+    </txv-video>
 </view>
 <view class="control">
+    <view class="btn" >播放状态：{{playState}}</view>
     <view class="btn" bindtap="hehe">特殊测试用</view>
     <view class="btn" bindtap="hide">hide</view>
     <view class="btn" bindtap="show">show</view>
-
+    <view class="btn" bindtap="enableAutoplay">开启自动播放</view>
+    <view class="btn" bindtap="disableAutoplay">关闭自动播放</view>
+    <view class="btn" bindtap="hideControls">隐藏控制栏</view>
+    <view class="btn" bindtap="showControls">显示控制栏</view>
+    <view class="btn" bindtap="hideProgress">隐藏Progress</view>
+    <view class="btn" bindtap="showProgress">显示Progress</view>
     <view class="hd">videoContext</view>
     <view class="btn" bindtap="play">play</view>
     <view class="btn" bindtap="pause">pause</view>
+    <view class="btn" bindtap="changeVertVid">切换为竖屏VID</view>
+    <input type="text" 
+        value="{{changingvid}}" 
+        placeholder="切换vid" 
+        maxlength="11" 
+        debounce-time="300" 
+        bindconfirm="changeVid"
+    ></input>
+    <view class="btn" bindtap="seek">seekTo 10</view>
     <view class="btn" bindtap="requestFullScreen">requestFullScreen</view>
     <view class="btn" bindtap="exitFullScreen">exitFullScreen</view>
     <view class="btn" bindtap="playrate" data-rate="0.5">playrate 0.5</view>
