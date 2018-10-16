@@ -9,7 +9,6 @@
         bindstatechange="onStateChange"
         bindtimeupdate="onTimeUpdate"
         showProgress="{{showProgress1}}"
-        options="{{options}}"
         show-progress="{{false}}"
         bindfullscreenchange="onFullScreenChange">
         // 支持slot，用于在video上显示UI

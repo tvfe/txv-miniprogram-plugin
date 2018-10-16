@@ -3,7 +3,7 @@
 只需要一个vid！！把视频上传到腾讯视频之后得到vid！！就可以在自己的小程序上播放视频了！！流畅到爆！！
 ```
 // 在你们的wxml上这样插入视频元素
-<tx-video vid="e0354z3cqjp"></tx-video>
+<tx-video vid="e0354z3cqjp" playerid="txv1"></tx-video>
 ```
 
 本github仓库就是一个示例项目
