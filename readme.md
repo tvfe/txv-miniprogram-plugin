@@ -42,6 +42,7 @@ wxml
 * `width` 视频宽度
 * `height` 视频高度
 * `autoplay` 是否自动播放
+* `usePoster` 是否使用海报图
 * `poster` 视频海报，会根据视频vid拿一个默认值
 * `direction` 视频全屏时方向
 * `objectFit` 视频填充方式
@@ -70,6 +71,15 @@ txvContext.requestFullScreen(); // 进入全屏
 txvContext.exitFullScreen();    // 退出全屏
 txvContext.playbackRate(+e.currentTarget.dataset.rate); // 设置播放速率
 txvContext.seek(time);  //快进到某个时间
+
+//获取当前播放视频上下文
+var currPlayerId=TxvContext.getLastPlayId();     //获取当前播放视频的playerid
+var currPlayerContxt=TxvContext.getTxvContext(currPlayerId)   //获取当前播放视频的上下文，可进行play，pause等操作
+
+//开启和关闭播放器日志，默认关闭
+TxvContext.openLog()   //开启
+TxvContext.closeLog()  //关闭
+
 ```
 
 ### 最新版本功能
@@ -90,3 +100,4 @@ txvContext.seek(time);  //快进到某个时间
 ### tips
 1. playerid可以设置为vid
 2. 想实现点击视频任何区域，实现视频全屏，经测试发现ios下，部分机型不能正常捕获到video或者容器的tap事件，推荐视频区域不要用video，假写成一张图片和一个播放按钮，点击的时候全屏播放视频
+3. const TxvContext = requirePlugin("tencentvideo");可以打印TxvContext，插件暴露的接口都在这里面
