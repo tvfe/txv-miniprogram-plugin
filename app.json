@@ -31,14 +31,6 @@
       {
         "pagePath": "pages/multi/multi",
         "text": "多视频"
-      },
-      {
-        "pagePath": "pages/live/live",
-        "text": "单个直播"
-      },
-      {
-        "pagePath": "pages/multi-live/multi-live",
-        "text": "多个直播"
       }
     ]
   },

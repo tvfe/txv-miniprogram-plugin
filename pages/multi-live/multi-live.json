@@ -1,5 +1,0 @@
-{
-  "usingComponents": {
-    "txv-live": "plugin://tencentvideo/live"
-  }
-}

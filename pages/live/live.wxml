@@ -1,8 +1,0 @@
-<view hidden="{{tvphide}}">
-    <txv-live 
-        sid="103022403" 
-        pid="1825"
-        playerid="txv7" 
-        autoplay="{{true}}"
-    ></txv-live>
-</view>
