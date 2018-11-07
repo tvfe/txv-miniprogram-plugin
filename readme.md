@@ -1,6 +1,6 @@
 # 腾讯视频小程序播放插件
 
-只需要一个vid！！把视频上传到腾讯视频之后得到vid！！就可以在自己的小程序上播放视频了！！流畅到爆！！
+只需要一个vid！！把[视频上传](https://v.qq.com/u/upload.html)到腾讯视频之后得到vid！！就可以在自己的小程序上播放视频了！！流畅到爆！！
 ```
 // 在你们的wxml上这样插入视频元素
 <tx-video vid="e0354z3cqjp" playerid="txv1"></tx-video>
@@ -14,7 +14,7 @@
 首先，参见微信官方的[插件使用文档](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/plugin/using.html)申请插件权限，在申请使用插件的使用时，填写以下appid:`wxa75efa648b60994b`
 
 ### 引入插件代码
-参见[官方文档](https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/using.html)与[示例项目](https://github.com/tvfe/txv-miniprogram-plugin)，尽量使用最新版本插件，如有问题，可在开发社区下查找或者到github提交[issues](https://github.com/tvfe/txv-miniprogram-plugin/issues)
+参见[官方文档](https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/using.html)与[示例项目](https://github.com/tvfe/txv-miniprogram-plugin)，尽量使用最新版本插件，如在使用的过程中遇到问题，可在[微信开发社区](https://developers.weixin.qq.com/community/)下查找或者到github提交[issues](https://github.com/tvfe/txv-miniprogram-plugin/issues)
 
 ### 使用播放器组件
 wxml
