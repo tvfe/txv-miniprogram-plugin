@@ -48,6 +48,8 @@ wxml
 * `objectFit` 视频填充方式
 * `controls` 视频播放控件
 * `showCenterPlayBtn` 是否显示中间播放按钮
+* `isHiddenStop` 是否在不可见区域自动停止播放，默认false，即滑到不可见区域不停止播放
+* `isNeedMutex` 是否互斥播放，默认true，即播放一个视频另一个播放的视频自动被暂停
 
 组件元素支持的事件（最新版本基本上小程序的video事件都支持）:
 * `bindplay` 播放
