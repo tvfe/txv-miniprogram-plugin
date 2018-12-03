@@ -51,6 +51,11 @@ wxml
 * `isHiddenStop` 是否在不可见区域自动停止播放，默认false，即滑到不可见区域不停止播放
 * `isNeedMutex` 是否互斥播放，默认true，即播放一个视频另一个播放的视频自动被暂停
 
+/* V1.2.4 */
+* `enableDanmu` 是否允许弹幕，默认false
+* `danmuBtn` 是否显示弹幕button，默认false
+* `danmuList` 弹幕数据列表，具体数据格式请看小程序官网video组件
+
 组件元素支持的事件（最新版本基本上小程序的video事件都支持）:
 * `bindplay` 播放
 * `bindpause` 暂停
@@ -60,6 +65,12 @@ wxml
 * `binderror` 视频播放错误信息
 * `bindstatechange` 播放状态变更事件，包含loading, ready, playing, end, error，回调函数接受两个参数newstate，oldstate
 
+/* V1.2.4 */
+* `sendDanmu` 发送弹幕，具体数据格式请看小程序官网video组件
+* `hideVideo` 隐藏视频插件里面的播放器
+* `showVideo` 显示视频插件里面的播放器（隐藏后再显示目前有些机型会导致不能播放，已经在解决中）
+* `showContainer` 显示视频插件里面的最外层容器
+* `hideContainer` 隐藏视频插件里面的最外层容器
 
 ### 插件 js api
 ```
