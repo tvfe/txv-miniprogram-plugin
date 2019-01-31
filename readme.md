@@ -3,7 +3,22 @@
 只需要一个vid！！把[视频上传](https://v.qq.com/u/upload.html)到腾讯视频之后得到vid！！就可以在自己的小程序上播放视频了！！流畅到爆！！
 ```
 // 在你们的wxml上这样插入视频元素
-<tx-video vid="e0354z3cqjp" playerid="txv1"></tx-video>
+<txv-video vid="e0354z3cqjp" playerid="txv1"></txv-video>
+```
+```
+// 在你们的json里面插入
+"usingComponents": {
+  "txv-video": "plugin://tencentvideo/video"
+}
+```
+```
+// 在app.json里面引入插件，注意插件版本号填最新的版本号
+"plugins": {
+  "tencentvideo": {
+    "version": "1.2.4",
+    "provider": "wxa75efa648b60994b"
+  }
+}
 ```
 
 本github仓库就是一个示例项目
@@ -20,7 +35,7 @@
 wxml
 ```
 <txv-video 
-  vid="e0354z3cqjp"   // 可使用vid="{{vid}}"的方式应用data变量
+  vid="e0354z3cqjp"   // 可使用vid="{{vid}}"的方式应用data变量，要注意确保vid存在，详情可见文档最后面的tips
   playerid="txv1" 
   autoplay="{{true}}" // 是否自动播放
 ></txv-video>
@@ -111,6 +126,7 @@ TxvContext.closeLog()  //关闭
 
 
 ### tips
-1. playerid可以设置为vid
+1. playerid必须要全局唯一，可以设置为vid
 2. 想实现点击视频任何区域，实现视频全屏，经测试发现ios下，部分机型不能正常捕获到video或者容器的tap事件，推荐视频区域不要用video，假写成一张图片和一个播放按钮，点击的时候全屏播放视频
 3. const TxvContext = requirePlugin("tencentvideo");可以打印TxvContext，插件暴露的接口都在这里面
+4. 强烈建议在拿到vid后在渲染视频组件（<tx-video vid="{{vid}}" wx:if="{{vid}}" playerid="{{vid}}"></tx-video>），否则会报错，因为视频组件初始化一定要给vid
