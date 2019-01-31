@@ -128,5 +128,5 @@ TxvContext.closeLog()  //关闭
 ### tips
 1. playerid必须要全局唯一，可以设置为vid
 2. 想实现点击视频任何区域，实现视频全屏，经测试发现ios下，部分机型不能正常捕获到video或者容器的tap事件，推荐视频区域不要用video，假写成一张图片和一个播放按钮，点击的时候全屏播放视频
-3. const TxvContext = requirePlugin("tencentvideo");可以打印TxvContext，插件暴露的接口都在这里面
-4. 强烈建议在拿到vid后在渲染视频组件 <txv-video vid="{{vid}}" wx:if="{{vid}}" playerid="{{vid}}"></txv-video>,否则会报错，因为视频组件初始化一定要给vid
+3. ```const TxvContext = requirePlugin("tencentvideo");``` 可以打印TxvContext，插件暴露的接口都在这里面
+4. 强烈建议在拿到vid后在渲染视频组件 ```<txv-video vid="{{vid}}" wx:if="{{vid}}" playerid="{{vid}}"></txv-video>```,否则会报错，因为视频组件初始化一定要给vid
