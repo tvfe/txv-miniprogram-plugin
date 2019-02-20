@@ -128,7 +128,6 @@ TxvContext.closeLog()  //关闭
 2. 支持slot，由于原生video组件层级限制，slot内容推荐用cover-view
 3. 支持竖屏，海报
 4. 支持广告暂停和全屏
-
 /* V1.2.5 */
 5. 支持全屏下设置亮度
 6. 支持全屏下切换清晰度
@@ -138,8 +137,8 @@ TxvContext.closeLog()  //关闭
 要注意在小程序根目录`app.json`里声明对组件的依赖，在页面的json里声明对插件的使用。详见ps://developers.weixin.qq.com/miniprogram/dev/framework/plugin/using.html)与[示例项目](https://github.com/tvfe/txv-miniprogram-plugin)
 
 2. 常见视频播放错误
-  (1)播放器提示 ： 播放出错(P.0) 是捕获到video的binderror事件，大概率是网络断了
-  (2)播放器提示 ： 啊哦，  表示获取数据失败，提示的数字是返回的错误码
+  * 播放器提示 ： 播放出错(P.0) 是捕获到video的binderror事件，大概率是网络断了
+  * 播放器提示 ： 啊哦，  表示获取数据失败，提示的数字是返回的错误码
 
 
 ### tips
