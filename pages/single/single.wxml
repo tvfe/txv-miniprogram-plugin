@@ -6,6 +6,10 @@
         playerid="txv0" 
         autoplay="{{autoplay}}"
         controls="{{controls}}"
+
+        title="{{title}}"
+        defn="{{defn}}"
+
         bindstatechange="onStateChange"
         bindtimeupdate="onTimeUpdate"
         showProgress="{{showProgress1}}"
@@ -18,6 +22,7 @@
 <view class="control">
     <view class="btn" >播放状态：{{playState}}</view>
     <view class="btn" bindtap="hehe">特殊测试用</view>
+    <view class="btn" bindtap="replay">重播</view>
     <view class="btn" bindtap="hide">hide</view>
     <view class="btn" bindtap="show">show</view>
     <view class="btn" bindtap="enableAutoplay">开启自动播放</view>

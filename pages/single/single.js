@@ -5,13 +5,15 @@ Page({
 	data: {
 		tvphide: false,
 		vid: 'l0025mppim4',
+		title: "全屏时会显示的视频title",
+		defn: "超清",
 		changingvid: '',
 		controls: !!config.get('controls'),
 		autoplay: !!config.get('autoplay'),
 		playState: '',
 		showProgress1: true,
-		width:"100%",
-    	height:"auto"
+		width: "100%",
+		height: "auto"
 	},
 	onLoad: function (query) {
 		this.setData({
@@ -56,7 +58,7 @@ Page({
 			'tvphide': false
 		})
 	},
-	seek: function() {
+	seek: function () {
 		this.txvContext.seek(10);
 	},
 	play: function () {
@@ -74,33 +76,40 @@ Page({
 	playrate: function (e) {
 		this.txvContext.playbackRate(+e.currentTarget.dataset.rate);
 	},
-
-	onStateChange: function(e) {
+	replay() {
+		// 重播的第一种方式
+		this.txvContext.replay(this.data.vid)
+		//骚操作，重播的第二种方式
+		// this.setData({
+		// 	vid: this.data.vid + " "
+		// })
+	},
+	onStateChange: function (e) {
 		this.setData({
 			playState: e.detail.newstate
 		})
 	},
-	onTimeUpdate: function(e) {
+	onTimeUpdate: function (e) {
 	},
 	changeVertVid: function () {
 		this.setData({
 			vid: 'h0026v0vvl6'
 		})
 	},
-	changeVid: function(e) {
+	changeVid: function (e) {
 		this.setData({
 			vid: e.detail.value
 		});
 	},
-	showProgress(){
-	    this.setData({
-	      showProgress1:true
-	    })
+	showProgress() {
+		this.setData({
+			showProgress1: true
+		})
 	},
 	hideProgress() {
-	    this.setData({
-	      showProgress1: false
-	    })
+		this.setData({
+			showProgress1: false
+		})
 	},
 	onFullScreenChange: function () {
 		console.log('onFullScreenChange!!!')

@@ -77,6 +77,9 @@ wxml
 /* V1.2.5 */
 * `defn` 视频清晰度，默认auto，可选值：流畅，标清，高清，超清，蓝光，4K，杜比
 
+/* V1.2.6 */
+* `title` 视频全屏时显示的标题
+
 组件元素抛出的自定义事件
 * `bindstatechange` 播放状态变更事件，包含loading(资源加载中), ready(资源加载完成), playing(播放中，包含广告和视频), ended(广告和视频都播放完成), error，回调函数接受两个参数newstate，oldstate
 
@@ -121,6 +124,10 @@ TxvContext.closeLog()  //关闭
 * `hideVideoWithVoice` 隐藏视频插件，如果隐藏前正在播放，则隐藏后继续播
 * `showVideoWithVoice` 显示视频插件，跟上面的hideVideoWithVoice配合使用
 
+/* V1.2.6 */
+* `replay` 视频播放完成后，调用此方法可进行重播
+   用法：txvContext.replay(vid)，接受一个参数，需要重播的vid
+   骚操作，可以通过给vid前面或者后面加空格触发重播而不调用replay方法，如：vid+=" ";this.setData({vid})
 ```
 
 ### 版本功能迭代
