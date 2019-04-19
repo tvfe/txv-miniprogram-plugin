@@ -145,8 +145,10 @@ TxvContext.closeLog()  //关闭
 要注意在小程序根目录`app.json`里声明对组件的依赖，在页面的json里声明对插件的使用。详见ps://developers.weixin.qq.com/miniprogram/dev/framework/plugin/using.html)与[示例项目](https://github.com/tvfe/txv-miniprogram-plugin)
 
 2. 常见视频播放错误
-    * 播放器提示 ： 播放出错(P.0) 是捕获到video的binderror事件，大概率是网络断了
-    * 播放器提示 ： 啊哦，  表示获取数据失败，提示的数字是返回的错误码
+    * 播放器提示是P.0开头表示捕获到video的binderror事件，
+      可能的原因是MEDIA_ERR_SRC_NOT_SUPPORTED；MEDIA_ERR_DECODE；MEDIA_ERR_NETWORK
+    * 播放器提示是G.开头，是接口错误，后面提示的数字是返回的错误码
+    * 播放器提示是L开头，大概率是触发了逻辑错误
 
 
 ### tips
