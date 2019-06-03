@@ -9,6 +9,9 @@
 
         title="{{title}}"
         defn="{{defn}}"
+        vslideGesture="{{true}}"
+        enablePlayGesture="{{true}}"
+        playBtnPosition="center"
 
         bindstatechange="onStateChange"
         bindtimeupdate="onTimeUpdate"
@@ -16,7 +19,7 @@
         show-progress="{{false}}"
         bindfullscreenchange="onFullScreenChange">
         // 支持slot，用于在video上显示UI
-        <cover-view class='txv-video-slot'>video slot</cover-view>
+        <view class='txv-video-slot'>video slot</view>
     </txv-video>
 </view>
 <view class="control">

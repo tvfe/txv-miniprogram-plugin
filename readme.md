@@ -22,6 +22,8 @@
 ```
 有任何疑问请加qq群:807339057
 
+[付费去广告](http://v.qq.com/open)，过程中遇到任何问题，欢迎加群反馈
+
 本github仓库就是一个示例项目
 
 ## 接入方式
@@ -49,7 +51,7 @@ wxml
   width="{{100%}}"    //自定义宽度
   height="{{'auto'}}" // 自定义高度
   autoplay="{{true}}"> // 是否自动播放
-  <cover-view class='txv-video-slot'>video slot</cover-view>
+  <view class='txv-video-slot'>video slot</view>
 </txv-video>
 ```
 组件元素支持的自定义属性：
@@ -79,6 +81,13 @@ wxml
 
 /* V1.2.6 */
 * `title` 视频全屏时显示的标题
+
+/* V1.3.3 */
+* `vslideGesture` Boolean，非全屏下，上下滑动调节亮度和音量，默认false
+* `vslideGestureInFullscreen` Boolean，全屏下，上下滑动调节亮度和音量，默认true
+* `enablePlayGesture` Boolean，双击播放或者暂停视频，默认false
+* `showMuteBtn` Boolean，是否显示静音按钮，默认false
+* `playBtnPosition` String，播放按钮位置，默认bottom，可选值center
 
 组件元素抛出的自定义事件
 * `bindstatechange` 播放状态变更事件，包含loading(资源加载中), ready(资源加载完成), playing(播放中，包含广告和视频), ended(广告和视频都播放完成), error，回调函数接受两个参数newstate，oldstate
@@ -133,12 +142,14 @@ TxvContext.closeLog()  //关闭
 ### 版本功能迭代
 1. V1.2.4及之前版本
     * 全局只播放一个视频，并且视频滑出可见区域自动停止播放
-    * 支持slot，由于原生video组件层级限制，slot内容推荐用cover-view
+    * 支持slot
     * 支持竖屏，海报
     * 支持广告暂停和全屏
 2. V1.2.5
     * 支持全屏下设置亮度
     * 支持全屏下切换清晰度
+3. V1.3.3
+    * cover-view改为view
 
 ### 常见问题
 1. 找不到playerid为txv1的txv-video组件
