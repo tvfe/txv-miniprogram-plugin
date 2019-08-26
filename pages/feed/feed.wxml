@@ -1,0 +1,40 @@
+
+<view class="mod_box mod_feeds_list">
+    <view class="mod_bd">
+      <view class="figure_box"  
+            wx:for="{{videoList}}" 
+            wx:for-item="video" 
+            wx:for-index="index" 
+            wx:key="{{video.vid}}">
+        <view class="mod_poster"  
+              data-vid="{{video.vid}}"
+              data-index="{{index}}"
+              bindtap="onPicClick">
+          <image class="poster"  
+                 src="{{'http://shp.qpic.cn/qqvideo/0/' + video.vid + '/0'}}"></image>
+          <!-- 标题、时间和播放按钮 -->
+          <view>
+            <image class="play_icon"
+                   src="https://puui.qpic.cn/vupload/0/20181023_1540283106706_mem4262nz4.png/0"></image>
+            <view class="time">11:12</view>
+            <view class="toptitle two_row">{{video.title}}-{{index}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{currVideo.vid}}" 
+          style="top:{{top+'px'}};" 
+          class="videoContainer">
+      <txv-video
+            vid="{{currVideo.vid}}"  
+            playerid="tvp"
+            autoplay="{{true}}"
+            bindcontentchange="onTvpContentChange"
+            bindplay="onTvpPlay"
+            bindended="onTvpEnd"
+            bindpause="onTvpPause"
+            bindstatechange="onTvpStateChanage"
+            bindtimeupdate="onTvpTimeupdate"
+            bindfullscreenchange="onFullScreenChange"></txv-video>
+    </view>
+  </view>

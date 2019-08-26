@@ -24,7 +24,7 @@
 
 [付费去广告](http://v.qq.com/open)，过程中遇到任何问题，欢迎加群反馈
 
-本github仓库就是一个示例项目
+本github仓库就是一个示例项目，包含[feed列表（不卡顿）](https://github.com/tvfe/txv-miniprogram-plugin/tree/master/pages/feed)、单视频、多视频场景
 
 ## 接入方式
 

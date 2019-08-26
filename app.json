@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/single/single",
-    "pages/multi/multi"
+    "pages/multi/multi",
+    "pages/feed/feed"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -31,15 +32,19 @@
       {
         "pagePath": "pages/multi/multi",
         "text": "多视频"
+      },
+      {
+        "pagePath": "pages/feed/feed",
+        "text": "不卡顿的feed"
       }
     ]
   },
   "debug": true,
-
   "plugins": {
     "tencentvideo": {
-      "version": "1.2.0",
+      "version": "1.3.6",
       "provider": "wxa75efa648b60994b"
     }
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
