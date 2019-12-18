@@ -2,16 +2,6 @@
 
 只需要一个vid！！把[视频上传](https://v.qq.com/u/upload.html)到腾讯视频之后得到vid！！就可以在自己的小程序上播放视频了！！流畅到爆！！
 ```
-// 在你们的wxml上这样插入视频元素
-<txv-video vid="e0354z3cqjp" playerid="txv1"></txv-video>
-```
-```
-// 在你们的json里面插入
-"usingComponents": {
-  "txv-video": "plugin://tencentvideo/video"
-}
-```
-```
 // 在app.json里面引入插件，注意插件版本号填最新的版本号
 "plugins": {
   "tencentvideo": {
@@ -20,6 +10,16 @@
   }
 }
 ```
+```
+// 在你们的json里面插入
+"usingComponents": {
+  "txv-video": "plugin://tencentvideo/video"
+}
+```
+```
+// 在你们的wxml上这样插入视频元素
+<txv-video vid="e0354z3cqjp" playerid="txv1"></txv-video>
+```
 有任何疑问请加qq群:807339057
 
 [付费去广告](http://v.qq.com/open)，过程中遇到任何问题，欢迎加群反馈
@@ -27,15 +27,17 @@
 本github仓库就是一个示例项目，包含[feed列表（不卡顿）](https://github.com/tvfe/txv-miniprogram-plugin/tree/master/pages/feed)、单视频、多视频场景
 
 ## QQ小程序接入方式
-QQ小程序也支持用视频播放插件啦，接入步骤与微信小程序类似，只是appid和版本号不一样
-### 申请使用插件 appid:1109840991
-首先，参见QQ小程序官方的[插件使用文档](https://q.qq.com/wiki/develop/miniprogram/frame/plugins/plugins_use_plugin.html)申请插件权限，在申请使用插件的使用时，填写以下appid:`1109840991`
-
-### 引入插件代码
-参见[官方文档](https://q.qq.com/wiki/develop/miniprogram/frame/plugins/plugins_use_plugin.html)，尽量使用最新版本插件，如有问题，可在开发社区下查找或者到github提交[issues](https://github.com/tvfe/txv-miniprogram-plugin/issues)
-
-### 使用播放器组件
-使用方式与微信小程序一致，详细见下方
+QQ小程序也支持用视频播放插件啦，接入步骤与微信小程序类似，只是appid和版本号不一样，详见[官方文档](https://q.qq.com/wiki/develop/miniprogram/frame/plugins/plugins_use_plugin.html)，尽量使用最新版本插件，如有问题，可在开发社区下查找或者到github提交[issues](https://github.com/tvfe/txv-miniprogram-plugin/issues)
+```
+// 在app.json里面引入插件，注意插件版本号填最新的版本号
+"plugins": {
+  "tencentvideo": {
+    "version": "1.0.0",        // QQ小程序插件版本号
+    "provider": "1109840991"   // QQ小程序的APPID
+  }
+}
+```
+播放器组件的使用方式与微信小程序一致，具体属性和事件请看下方
 
 ## 微信小程序接入方式
 ### 申请使用插件 appid:wxa75efa648b60994b
