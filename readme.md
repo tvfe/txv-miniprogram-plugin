@@ -26,8 +26,18 @@
 
 本github仓库就是一个示例项目，包含[feed列表（不卡顿）](https://github.com/tvfe/txv-miniprogram-plugin/tree/master/pages/feed)、单视频、多视频场景
 
-## 接入方式
+## QQ小程序接入方式
+QQ小程序也支持用视频播放插件啦，接入步骤与微信小程序类似，只是appid和版本号不一样
+### 申请使用插件 appid:1109840991
+首先，参见QQ小程序官方的[插件使用文档](https://q.qq.com/wiki/develop/miniprogram/frame/plugins/plugins_use_plugin.html)申请插件权限，在申请使用插件的使用时，填写以下appid:`1109840991`
 
+### 引入插件代码
+参见[官方文档](https://q.qq.com/wiki/develop/miniprogram/frame/plugins/plugins_use_plugin.html)，尽量使用最新版本插件，如有问题，可在开发社区下查找或者到github提交[issues](https://github.com/tvfe/txv-miniprogram-plugin/issues)
+
+### 使用播放器组件
+使用方式与微信小程序一致，详细见下方
+
+## 微信小程序接入方式
 ### 申请使用插件 appid:wxa75efa648b60994b
 首先，参见微信官方的[插件使用文档](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/plugin/using.html)申请插件权限，在申请使用插件的使用时，填写以下appid:`wxa75efa648b60994b`
 
@@ -153,7 +163,7 @@ TxvContext.closeLog()  //关闭
 
 ### 常见问题
 1. 找不到playerid为txv1的txv-video组件
-要注意在小程序根目录`app.json`里声明对组件的依赖，在页面的json里声明对插件的使用。详见ps://developers.weixin.qq.com/miniprogram/dev/framework/plugin/using.html)与[示例项目](https://github.com/tvfe/txv-miniprogram-plugin)
+要注意在小程序根目录`app.json`里声明对组件的依赖，在页面的json里声明对插件的使用。详见[官方文档](https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/using.html)与[示例项目](https://github.com/tvfe/txv-miniprogram-plugin)
 
 2. 常见视频播放错误
     * 播放器提示是P.0开头表示捕获到video的binderror事件，
