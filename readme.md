@@ -26,9 +26,9 @@
 <txv-live pid="" sid="" playerid="txv1"></txv-live>
 ```
 
-[付费去广告](http://v.qq.com/open)，过程中遇到任何问题，欢迎加群反馈
+[付费去广告](http://v.qq.com/open)，过程中遇到任何问题，欢迎通过issue和小程序社区反馈
 
-本github仓库就是一个示例项目，包含[feed列表（不卡顿）](https://github.com/tvfe/txv-miniprogram-plugin/tree/master/pages/feed)、单视频、多视频场景
+本github仓库就是一个示例项目，包含[feed列表（不卡顿）](https://github.com/tvfe/txv-miniprogram-plugin/tree/master/pages/feed)、单视频、多视频，直播等场景
 
 ## QQ小程序接入方式
 QQ小程序也支持用视频播放插件啦，接入步骤与微信小程序类似，只是appid和版本号不一样，详见[官方文档](https://q.qq.com/wiki/develop/miniprogram/frame/plugins/plugins_use_plugin.html)，尽量使用最新版本插件，如有问题，可在开发社区下查找或者到github提交[issues](https://github.com/tvfe/txv-miniprogram-plugin/issues)
