@@ -1,3 +1,9 @@
+.online_number{
+  color:red;
+  position:'absolute';
+  top:0;
+  left:10px;
+}
 .btn, input {
     display: block;
     border: 1px solid #48c23d;
@@ -16,9 +22,4 @@
   font-size: 16px;
   color: #fff;
   margin: 10px;
-}
-
-.high{
-  height: 600px;
-  border:1px solid red;
 }

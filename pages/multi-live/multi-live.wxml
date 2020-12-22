@@ -1,0 +1,46 @@
+<view hidden="{{tvphide}}">
+    <txv-live 
+        sid="100105100" 
+        pid="56"
+        playerid="txv8" 
+        autoplay="{{true}}"
+        width="{{'300px'}}"
+        height="{{'100px'}}"
+        isHiddenStop="{{isHiddenStop}}"
+        isNeedMutex="{{isNeedMutex}}"
+        bindfullscreenchange="onFullScreen"
+    ></txv-live>
+</view>
+<view class="block">------------丰姿绰约分割线-----------</view>
+<view hidden="{{tvphide}}">
+    <txv-live 
+        sid="100105100" 
+        pid="56"
+        playerid="txv9" 
+        autoplay="{{false}}"
+        isHiddenStop="{{isHiddenStop}}"
+        isNeedMutex="{{isNeedMutex}}"
+    ></txv-live>
+</view>
+<view class="block">------------丰姿绰约分割线-----------</view>
+<view hidden="{{tvphide}}">
+    <txv-live 
+        sid="100105100" 
+        pid="56"
+        playerid="txv10" 
+        autoplay="{{false}}"
+        isHiddenStop="{{isHiddenStop}}"
+        isNeedMutex="{{isNeedMutex}}"
+    ></txv-live>
+</view>
+<view class="block">------------丰姿绰约分割线-----------</view>
+<view hidden="{{tvphide}}">
+    <txv-live 
+        sid="100105100" 
+        pid="56"
+        playerid="txv11" 
+        autoplay="{{false}}"
+        isHiddenStop="{{isHiddenStop}}"
+        isNeedMutex="{{isNeedMutex}}"
+    ></txv-live>
+</view>

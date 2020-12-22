@@ -5,7 +5,7 @@
 // 在app.json里面引入插件，注意插件版本号填最新的版本号
 "plugins": {
   "tencentvideo": {
-    "version": "1.2.4",
+    "version": "1.3.18",
     "provider": "wxa75efa648b60994b"
   }
 }
@@ -13,14 +13,18 @@
 ```
 // 在你们的json里面插入
 "usingComponents": {
+  // 点播组件
   "txv-video": "plugin://tencentvideo/video"
+  // 直播组件
+  "txv-live": "plugin://tencentvideo/video"
 }
 ```
 ```
 // 在你们的wxml上这样插入视频元素
 <txv-video vid="e0354z3cqjp" playerid="txv1"></txv-video>
+// 直播
+<txv-live pid="" sid="" playerid="txv1"></txv-live>
 ```
-有任何疑问请加qq群:807339057
 
 [付费去广告](http://v.qq.com/open)，过程中遇到任何问题，欢迎加群反馈
 
@@ -54,9 +58,15 @@ wxml
   playerid="txv1"     //playerid必须要全局唯一，可以设置为vid
   autoplay="{{true}}" // 是否自动播放
 ></txv-video>
+
+<txv-live 
+  sid=""
+  pid=""   // sid和pid为必传，可以用sid="{{sid}}" pid="{{pid}}" wx:if="{{sid && pid}}" 的形式使用变量
+  playerid="tx2"     //playerid必须要全局唯一，可以设置为vid
+></txv-live>
 ```
 ```
-// 支持slot，用于在video上显示UI
+// 支持slot，用于在video上显示UI，txv-live同样支持
 <txv-video 
   vid="e0354z3cqjp"   // 可使用vid="{{vid}}" wx:if="{{vid}}" 的方式应用data变量,要注意确保vid存在，详情可见文档最后面的tips
   playerid="txv1" 
@@ -66,13 +76,24 @@ wxml
   <view class='txv-video-slot'>video slot</view>
 </txv-video>
 ```
-组件元素支持的自定义属性：
+点播组件元素支持的自定义属性：
 * `vid` 视频id
 * `playerid` 播放器标识符,需全局唯一，用于获取Video Context，进而手动控制播放
 * `width` 视频宽度
 * `height` 视频高度
 * `isHiddenStop` 是否在不可见区域自动停止播放，默认false，即滑到不可见区域不停止播放
 * `isNeedMutex` 是否互斥播放，默认true，即播放一个视频另一个播放的视频自动被暂停
+
+直播组件元素支持的自定义属性：
+* `sid` 流id
+* `pid` 直播节目id
+* `playerid` 播放器标识符,需全局唯一，用于获取Video Context，进而手动控制播放
+* `width` 视频宽度
+* `height` 视频高度
+* `isStopPoll` 业务方希望自己进行轮询
+* `beforeText` 直播未开始时的提示问题
+* `afterText` 直播已结束时的提示问题
+* `isHiddenStop` 是否在不可见区域自动停止播放，默认false，即滑到不可见区域不停止播放
 
 组件元素支持的video属性，[属性取值与video一致](https://developers.weixin.qq.com/miniprogram/dev/component/video.html)（插件支持小程序video的大部分属性）
 * `autoplay` 是否自动播放
@@ -111,6 +132,12 @@ wxml
 * `bindfullscreenchange` 全屏
 * `bindtimeupdate` 播放进度更新事件
 * `binderror` 视频播放错误信息
+  
+/* V1.3.9 */
+* `bindmetadatachanged` 播放器加载metadata完成时回调
+
+/* V1.3.18 */
+* 直播组件新增清晰度切换功能
 
 ### 插件 js api
 ```
@@ -122,8 +149,8 @@ txvContext.play();  // 播放
 txvContext.pause(); // 暂停
 txvContext.requestFullScreen(); // 进入全屏
 txvContext.exitFullScreen();    // 退出全屏
-txvContext.playbackRate(+e.currentTarget.dataset.rate); // 设置播放速率
-txvContext.seek(time);  //快进到某个时间
+txvContext.playbackRate(+e.currentTarget.dataset.rate); // 设置播放速率（直播不支持）
+txvContext.seek(time);  //快进到某个时间（直播不支持）
 
 
 //获取当前播放视频上下文，多个实例时特别有用
@@ -172,6 +199,10 @@ TxvContext.closeLog()  //关闭
       可能的原因是MEDIA_ERR_SRC_NOT_SUPPORTED；MEDIA_ERR_DECODE；MEDIA_ERR_NETWORK
     * 播放器提示是G.开头，是接口错误，后面提示的数字是返回的错误码
     * 播放器提示是L开头，大概率是触发了逻辑错误
+
+3. 直播相关的问题
+    * 弹幕能力目前无法在真机上支持，已知iOS真机无法显示和发送弹幕，请使用官方的miniprogram-barrage实现
+    * 安卓平台部分机型会显示进度条，iOS无显示。
 
 
 ### tips

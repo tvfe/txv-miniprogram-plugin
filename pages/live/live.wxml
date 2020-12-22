@@ -1,0 +1,29 @@
+<view hidden="{{tvphide}}">
+    <txv-live 
+        sid="{{sid}}" 
+        pid="{{pid}}"
+        playerid="txv7" 
+        beforeText="直播还没有开始呢"
+        afterText="直播结束啦"
+        autoplay="{{true}}"
+        enableDanmu="{{true}}"
+        extraParam="{{extraParam}}"
+        danmuBtn="{{true}}"
+        danmuList="{{danmuList}}"
+        muted="{{muted}}"
+        bindmuted="onMuteChange"
+        bindtimeupdate="onTimeUpdate"
+        bindlivestatus="getLiveStatus">
+    </txv-live>
+</view>
+<view class="control">
+    <view class="btn" bindtap="hide">hide</view>
+    <view class="btn" bindtap="show">show</view>
+    <view class="btn" bindtap="mute">mute</view>
+    <button bindtap="switch">switch</button>
+    <input bindblur="bindInputPid" placeholder='pid'></input>
+    <input bindblur="bindInputSid" placeholder='sid'></input>
+</view>
+
+<!-- sid="100105100" 
+        pid="56" -->

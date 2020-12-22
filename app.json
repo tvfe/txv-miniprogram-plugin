@@ -1,7 +1,9 @@
 {
   "pages": [
     "pages/single/single",
+    "pages/live/live",
     "pages/multi/multi",
+    "pages/multi-live/multi-live",
     "pages/feed/feed"
   ],
   "window": {
@@ -34,15 +36,15 @@
         "text": "多视频"
       },
       {
-        "pagePath": "pages/feed/feed",
-        "text": "不卡顿的feed"
+        "pagePath": "pages/live/live",
+        "text": "直播"
       }
     ]
   },
   "debug": true,
   "plugins": {
     "tencentvideo": {
-      "version": "1.3.6",
+      "version": "dev",
       "provider": "wxa75efa648b60994b"
     }
   },

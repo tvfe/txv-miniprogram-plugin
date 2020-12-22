@@ -1,7 +1,34 @@
-<txv-video vid="e0354z3cqjp" playerid="txv1"></txv-video>
+<!-- <video src="http://ugclx.video.gtimg.com/uwMRJfz-r5jAYaQXGdGnC2_ppdhgmrDlPaRvaV7F2Ic/p0382yhi66i.mp4?vkey=4CDC68E4F3B76DE2A8F6D15F9D946C1B16B3311B10CB43C87F02966D16C91FC05BE689F5D1B7A0EE51330510CE64B38E3166E93552DBD09675A3836620DE0C607E31D7C7610A0F03D1A23E12EB512DC9F78FB3DE8B62BCA6948F8296BC98C314&br=60&fmt=auto&level=0&platform=4210801&sdtfrom=v4169">
+</video> -->
+<txv-video vid="e0354z3cqjp" 
+           playerid="e0354z3cqjp" 
+           isNeedMutex="{{isNeedMutex}}"></txv-video>
 <view class="block">------------丰姿绰约分割线-----------</view>
-<txv-video vid="p0382yhi66i" playerid="txv2" autoplay='{{true}}'></txv-video>
+<txv-video vid="p0382yhi66i" 
+           playerid="p0382yhi66i" 
+           autoplay='{{true}}'
+           isHiddenStop="{{isHiddenStop}}"
+           isNeedMutex="{{isNeedMutex}}"></txv-video>
 <view class="block">------------丰姿绰约分割线-----------</view>
-<txv-video vid="k0379ogcfrh" playerid="txv3"></txv-video>
+<txv-video vid="k0379ogcfrh" 
+           playerid="k0379ogcfrh"
+           isHiddenStop="{{isHiddenStop}}"
+           isNeedMutex="{{isNeedMutex}}"></txv-video>
 <view class="block">------------丰姿绰约分割线-----------</view>
-<txv-video vid="p0127cmrg1m" playerid="txv4"></txv-video>
+<txv-video vid="p0127cmrg1m" 
+           playerid="p0127cmrg1m"
+           isHiddenStop="{{isHiddenStop}}"
+           isNeedMutex="{{isNeedMutex}}"></txv-video>
+
+<!-- <video src="http://183.60.131.49/vlive.qqvideo.tc.qq.com/AjHnggStNp9IcpJ_BudfDpJGVnqgYJ6A1quXdPerKNxU/i0200h8bpfe.p201.1.mp4?vkey=A7AB6DB945108166D3808F2059E76C618F650AEE534AECE6202C903A498F0E764EBCB01E74EDCAB1E447441344C463689EC1A5C1CC8F2BC03AF6F96553DADD71372F9AD68ADB4C669695C11F1A1FE5831FB4D9CEBD6D57DBBC539A5EEC0161D1F5CFD6ACD493B5B1&platform=&sdtfrom=&fmt=shd&level=0"
+
+></video>
+<video autoplay='{{true}}' src="http://183.60.131.49/vlive.qqvideo.tc.qq.com/AjHnggStNp9IcpJ_BudfDpJGVnqgYJ6A1quXdPerKNxU/i0200h8bpfe.p201.1.mp4?vkey=A7AB6DB945108166D3808F2059E76C618F650AEE534AECE6202C903A498F0E764EBCB01E74EDCAB1E447441344C463689EC1A5C1CC8F2BC03AF6F96553DADD71372F9AD68ADB4C669695C11F1A1FE5831FB4D9CEBD6D57DBBC539A5EEC0161D1F5CFD6ACD493B5B1&platform=&sdtfrom=&fmt=shd&level=0"
+
+></video>
+<video src="http://183.60.131.49/vlive.qqvideo.tc.qq.com/AjHnggStNp9IcpJ_BudfDpJGVnqgYJ6A1quXdPerKNxU/i0200h8bpfe.p201.1.mp4?vkey=A7AB6DB945108166D3808F2059E76C618F650AEE534AECE6202C903A498F0E764EBCB01E74EDCAB1E447441344C463689EC1A5C1CC8F2BC03AF6F96553DADD71372F9AD68ADB4C669695C11F1A1FE5831FB4D9CEBD6D57DBBC539A5EEC0161D1F5CFD6ACD493B5B1&platform=&sdtfrom=&fmt=shd&level=0"
+
+></video>
+<video src="http://183.60.131.49/vlive.qqvideo.tc.qq.com/AjHnggStNp9IcpJ_BudfDpJGVnqgYJ6A1quXdPerKNxU/i0200h8bpfe.p201.1.mp4?vkey=A7AB6DB945108166D3808F2059E76C618F650AEE534AECE6202C903A498F0E764EBCB01E74EDCAB1E447441344C463689EC1A5C1CC8F2BC03AF6F96553DADD71372F9AD68ADB4C669695C11F1A1FE5831FB4D9CEBD6D57DBBC539A5EEC0161D1F5CFD6ACD493B5B1&platform=&sdtfrom=&fmt=shd&level=0"
+
+></video> -->
