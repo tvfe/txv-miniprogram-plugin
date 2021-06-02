@@ -16,7 +16,7 @@
   // 点播组件
   "txv-video": "plugin://tencentvideo/video"
   // 直播组件
-  "txv-live": "plugin://tencentvideo/video"
+  "txv-live": "plugin://tencentvideo/live"
 }
 ```
 ```
