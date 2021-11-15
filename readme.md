@@ -1,220 +1,227 @@
-# 腾讯视频小程序播放插件
+# ThumbPlayer-Miniprogram 腾讯视频小程序播放器SDK
 
-只需要一个vid！！把[视频上传](https://v.qq.com/u/upload.html)到腾讯视频之后得到vid！！就可以在自己的小程序上播放视频了！！流畅到爆！！
+适用于手Q和微信小程序的播放器**插件**，开箱即用无需配置。**仅支持播放腾讯视频已上架的资源**。  
+## 旧版本文档
+[1.x版本文档](https://github.com/tvfe/txv-miniprogram-plugin/blob/master/archieve/readme.md)
+## 使用
+
+有关插件的使用请参考微信[官方文档](https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/using.html)。
+
+如果你希望在小程序中使用腾讯视频的播放器插件，请先在插件商店中找到并申请。
+
+申请通过后，可以这样引入播放器组件和js接口。
+```json
+// app.json
+{
+   "plugins": {
+      "player": {
+         "version": "2.0.0",
+         "provider": "wxa75efa648b60994b"
+      }
+  },
+}
+// page index.json
+{
+   //...你的其他页面配置
+   "usingComponents": {
+      "player-component": "plugin://player/video",
+   }
+}
 ```
-// 在app.json里面引入插件，注意插件版本号填最新的版本号
-"plugins": {
-  "tencentvideo": {
-    "version": "1.3.18",
-    "provider": "wxa75efa648b60994b"
+```html
+<!-- index.wxml -->
+<view>
+   <player-component vid="{{你想要播放的vid}}"/>
+</view>
+```
+```js
+// index.js
+const store = requirePlugin('player')
+```
+## 1.x版本和2.0版本的区别
+
+[2.0迁移指南](https://github.com/tvfe/txv-miniprogram-plugin/blob/master/public/transition.md)
+
+由于1.x版本诞生于小程序的早期，为了实现部分功能不得不使用了一些hack逻辑且文档上比较缺失。所以播放器插件在2.0版本进行了一次彻底的重构，完全替换为`typescript`，提供完整的类型支持和接口文档。同时也提供了定制的ui、支持外部自定义组件扩展、多video标签预加载、更规范和详细的事件等改进。如果你有希望加入的功能或迁移中遇到了困难，欢迎向我们提issue！
+
+为了方便已有用户的接入，我们也提供了适配层。在开启适配层的情况下**绝大部分**接口调用及事件监听将和1.x版本保持一致，而对于不兼容的部分我们也提供解决方案，详见[迁移文档](https://github.com/tvfe/txv-miniprogram-plugin/tree/master/public/typedoc)。同时，适配层也和新版本的接口及事件兼容，在保证使用的前提下你也可以体验2.0版本带来的新接口，新事件。
+
+> 2.1版本后将不再进行针对适配层接口和事件的bug修复及功能补全，请尽快迁移到新版本的接口和事件上。
+
+## API文档
+
+完整api和类型声明请参考[typedoc](https://github.com/tvfe/txv-miniprogram-plugin/tree/master/public/typedoc)
+### 常用api
+下面是一些你经常会用到的api。
+#### 获取播放器实例
+``` js
+const store = requirePlugin('player')
+// index.wxml 中 <video id="tvp-id" playerId="tvp">
+const player = store.get('tvp');
+// 或
+const player = this.selectComponent('#tvp-id');
+```
+> 这两个方法获取到的实例是相同的
+
+#### 打开/关闭调试日志
+``` js
+store.openLog();
+store.closeLog();
+```
+### player
+
+#### 播放
+``` js
+const player = store.get('player')
+player.play() // 调用小程序videoContext.play()
+player.play('想播放的vid') // 播放指定vid
+player.play('想播放的vid', { startTime: 5 }) // 指定起播的时间
+```
+
+#### 跳转/暂停/停止
+``` js
+const player = store.get('player')
+player.pause(); // 暂停，同videoContext.pause()
+player.stop(); // 停止，同videoContext.stop()
+player.seek(5); // 跳转，同videoContext.seek()
+```
+> `stop()`方法会事实上停止播放流程并清空播放列表，调用后无法使用`play()`接口重新开播。如果希望重新播放请调用`replay()`接口
+
+#### 重播
+``` js
+const player = store.get('player')
+player.replay();
+```
+
+#### 设定清晰度
+``` js
+const player = store.get('player')
+player.setLevel('fhd')
+player.setLevel('fhd').catch(error => {
+  // error处理
+})
+```
+> 如果切换失败的话可以通过catch捕获异常，播放器会自动续播当前内容。
+
+
+### 播放器支持的video标签属性
+```ts
+  /**
+   * 指定视频初始播放位置
+   */
+  initialTime: {
+    type: NumberConstructor,
+    value: number, // 0
   }
-}
-```
-```
-// 在你们的json里面插入
-"usingComponents": {
-  // 点播组件
-  "txv-video": "plugin://tencentvideo/video"
-  // 直播组件
-  "txv-live": "plugin://tencentvideo/live"
-}
-```
-```
-// 在你们的wxml上这样插入视频元素
-<txv-video vid="e0354z3cqjp" playerid="txv1"></txv-video>
-// 直播
-<txv-live pid="" sid="" playerid="txv1"></txv-live>
-```
-
-[付费去广告](http://v.qq.com/open)，过程中遇到任何问题，欢迎通过issue和小程序社区反馈
-
-本github仓库就是一个示例项目，包含[feed列表（不卡顿）](https://github.com/tvfe/txv-miniprogram-plugin/tree/master/pages/feed)、单视频、多视频，直播等场景
-
-## QQ小程序接入方式
-QQ小程序也支持用视频播放插件啦，接入步骤与微信小程序类似，只是appid和版本号不一样，详见[官方文档](https://q.qq.com/wiki/develop/miniprogram/frame/plugins/plugins_use_plugin.html)，尽量使用最新版本插件，如有问题，可在开发社区下查找或者到github提交[issues](https://github.com/tvfe/txv-miniprogram-plugin/issues)
-```
-// 在app.json里面引入插件，注意插件版本号填最新的版本号
-"plugins": {
-  "tencentvideo": {
-    "version": "1.0.0",        // QQ小程序插件版本号
-    "provider": "1109840991"   // QQ小程序的APPID
+  /**
+     * 是否使用ui，这里是设置总体UI开关。
+     */
+  controls: {
+    type: BooleanConstructor,
+    value: boolean, // true
+  },
+  /**
+     * 是否静音播放
+     */
+  muted: {
+    type: BooleanConstructor,
+    value: boolean, // false
+  },
+  /**
+     * 设置全屏时视频的方向，不指定则根据宽高比自动判断
+     */
+  direction: {
+    type: NumberConstructor,
+    value: number, // -1
+  },
+  /**
+     * 屏幕锁
+     */
+  showScreenLockButton: {
+    type: BooleanConstructor,
+    value: boolean, // false
   }
-}
-```
-播放器组件的使用方式与微信小程序一致，具体属性和事件请看下方
+  /**
+     * 当视频大小与 video 容器大小不一致时，视频的表现形式
+     */
+  objectFit: {
+    type: StringConstructor,
+    value: string, // 'contain'
+  },
+  /**
+     * 是否开启播放手势，即双击切换播放/暂停
+     */
+  enablePlayGesture: {
+    type: BooleanConstructor,
+    value: boolean, // false
+  },
+  /**
+     * 当跳转到本小程序的其他页面时，是否自动暂停本页面的视频播放
+     */
+  autoPauseIfNavigate: {
+    type: BooleanConstructor,
+    value: boolean, // true
+  },
+  /**
+     * 当跳转到其它微信原生页面时，是否自动暂停本页面的视频
+     */
+  autoPauseIfOpenNative: {
+    type: BooleanConstructor,
+    value: boolean, // true
+  },
+  /**
+     * 是否开启手机横屏时自动全屏，当系统设置开启自动旋转时生效
+     */
+  enableAutoRotation: {
+    type: BooleanConstructor,
+    value: boolean, // false
+  },
+  /**
+     * 是否开启投屏
+     */
+  showCastingButton: {
+    type: BooleanConstructor,
+    value: boolean, // false
+  },
+  /**
+     * 非全屏模式下音量/亮度手势
+     */
+  vslideGesture: {
+    type: BooleanConstructor,
+    value: boolean, // false
+  },
+  /** 全屏下模式下音量/亮度手势 */
+  vslideGestureInFullscreen: {
+    type: BooleanConstructor,
+    value: boolean, // true
+  },
+  /**
+     * 是否使用进度条手势
+     */
+  enableProgressGesture: {
+    type: BooleanConstructor,
+    value: boolean, // true
+  },
+  /**
+   * 是否自动播放
+   */
+  autoplay: {
+    type: BooleanConstructor,
+    value: boolean, // true
+  },
+  /** 是否显示进度条 */
+  showProgress: {
+    type: BooleanConstructor,
+    value: boolean, // true
+  },
+  ```
 
-## 微信小程序接入方式
-### 申请使用插件 appid:wxa75efa648b60994b
-首先，参见微信官方的[插件使用文档](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/plugin/using.html)申请插件权限，在申请使用插件的使用时，填写以下appid:`wxa75efa648b60994b`
+## 常见问题及说明
 
-### 引入插件代码
-参见[官方文档](https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/using.html)与[示例项目](https://github.com/tvfe/txv-miniprogram-plugin)，尽量使用最新版本插件，如有问题，可在开发社区下查找或者到github提交[issues](https://github.com/tvfe/txv-miniprogram-plugin/issues)
-
-### 使用播放器组件
-wxml
-```
-<txv-video 
-  vid="e0354z3cqjp"   // 可使用vid="{{vid}}" wx:if="{{vid}}" 的方式应用data变量,要注意确保vid存在，详情可见文档最后面的tips
-  playerid="txv1"     //playerid必须要全局唯一，可以设置为vid
-  autoplay="{{true}}" // 是否自动播放
-></txv-video>
-
-<txv-live 
-  sid=""
-  pid=""   // sid和pid为必传，可以用sid="{{sid}}" pid="{{pid}}" wx:if="{{sid && pid}}" 的形式使用变量
-  playerid="tx2"     //playerid必须要全局唯一，可以设置为vid
-></txv-live>
-```
-```
-// 支持slot，用于在video上显示UI，txv-live同样支持
-<txv-video 
-  vid="e0354z3cqjp"   // 可使用vid="{{vid}}" wx:if="{{vid}}" 的方式应用data变量,要注意确保vid存在，详情可见文档最后面的tips
-  playerid="txv1" 
-  width="{{100%}}"    //自定义宽度
-  height="{{'auto'}}" // 自定义高度
-  autoplay="{{true}}"> // 是否自动播放
-  <view class='txv-video-slot'>video slot</view>
-</txv-video>
-```
-点播组件元素支持的自定义属性：
-* `vid` 视频id
-* `playerid` 播放器标识符,需全局唯一，用于获取Video Context，进而手动控制播放
-* `width` 视频宽度
-* `height` 视频高度
-* `isHiddenStop` 是否在不可见区域自动停止播放，默认false，即滑到不可见区域不停止播放
-* `isNeedMutex` 是否互斥播放，默认true，即播放一个视频另一个播放的视频自动被暂停
-
-直播组件元素支持的自定义属性：
-* `sid` 流id
-* `pid` 直播节目id
-* `playerid` 播放器标识符,需全局唯一，用于获取Video Context，进而手动控制播放
-* `width` 视频宽度
-* `height` 视频高度
-* `isStopPoll` 业务方希望自己进行轮询
-* `beforeText` 直播未开始时的提示问题
-* `afterText` 直播已结束时的提示问题
-* `isHiddenStop` 是否在不可见区域自动停止播放，默认false，即滑到不可见区域不停止播放
-
-组件元素支持的video属性，[属性取值与video一致](https://developers.weixin.qq.com/miniprogram/dev/component/video.html)（插件支持小程序video的大部分属性）
-* `autoplay` 是否自动播放
-* `poster` 视频海报，会根据视频vid拿一个默认值
-* `usePoster` 是否使用海报图
-* `direction` 视频全屏时方向
-* `objectFit` 视频填充方式
-* `controls` 视频播放控件
-* `showCenterPlayBtn` 是否显示中间播放按钮
-
-/* V1.2.4 */
-* `enableDanmu` 是否允许弹幕，默认false
-* `danmuBtn` 是否显示弹幕button，默认false
-* `danmuList` 弹幕数据列表，具体数据格式请看小程序官网video组件
-
-/* V1.2.5 */
-* `defn` 视频清晰度，默认auto，可选值：流畅，标清，高清，超清，蓝光，4K，杜比
-
-/* V1.2.6 */
-* `title` 视频全屏时显示的标题
-
-/* V1.3.3 */
-* `vslideGesture` Boolean，非全屏下，上下滑动调节亮度和音量，默认false
-* `vslideGestureInFullscreen` Boolean，全屏下，上下滑动调节亮度和音量，默认true
-* `enablePlayGesture` Boolean，双击播放或者暂停视频，默认false
-* `showMuteBtn` Boolean，是否显示静音按钮，默认false
-* `playBtnPosition` String，播放按钮位置，默认bottom，可选值center
-
-组件元素抛出的自定义事件
-* `bindstatechange` 播放状态变更事件，包含loading(资源加载中), ready(资源加载完成), playing(播放中，包含广告和视频), ended(广告和视频都播放完成), error，回调函数接受两个参数newstate，oldstate
-
-组件抛出了小程序video抛出的所有事件，[事件含义与video一致](https://developers.weixin.qq.com/miniprogram/dev/component/video.html):
-* `bindplay` 播放
-* `bindpause` 暂停
-* `bindended` 播放结束，e.detail.isAd可以用来区分是广告还是视频
-* `bindfullscreenchange` 全屏
-* `bindtimeupdate` 播放进度更新事件
-* `binderror` 视频播放错误信息
-  
-/* V1.3.9 */
-* `bindmetadatachanged` 播放器加载metadata完成时回调
-
-/* V1.3.18 */
-* 直播组件新增清晰度切换功能
-
-### 插件 js api
-```
-const TxvContext = requirePlugin("tencentvideo");  
-
-let txvContext = TxvContext.getTxvContext('txv1') // txv1即播放器组件的playerid值
-
-txvContext.play();  // 播放
-txvContext.pause(); // 暂停
-txvContext.requestFullScreen(); // 进入全屏
-txvContext.exitFullScreen();    // 退出全屏
-txvContext.playbackRate(+e.currentTarget.dataset.rate); // 设置播放速率（直播不支持）
-txvContext.seek(time);  //快进到某个时间（直播不支持）
-
-
-//获取当前播放视频上下文，多个实例时特别有用
-var currPlayerId=TxvContext.getLastPlayId();     //获取当前播放视频的playerid
-var currPlayerContxt=TxvContext.getTxvContext(currPlayerId)   //获取当前播放视频的上下文，可进行play，pause等操作
-
-//开启和关闭播放器日志，默认关闭
-TxvContext.openLog()   //开启
-TxvContext.closeLog()  //关闭
-
-/* V1.2.4 */
-* `sendDanmu` 发送弹幕，具体数据格式请看小程序官网video组件
-* `hideVideo` 隐藏视频插件里面的播放器
-* `showVideo` 显示视频插件里面的播放器
-* `showContainer` 显示视频插件里面的最外层容器
-* `hideContainer` 隐藏视频插件里面的最外层容器
-
-/* V1.2.5 */
-* `hideVideoWithVoice` 隐藏视频插件，如果隐藏前正在播放，则隐藏后继续播
-* `showVideoWithVoice` 显示视频插件，跟上面的hideVideoWithVoice配合使用
-
-/* V1.2.6 */
-* `replay` 视频播放完成后，调用此方法可进行重播
-   用法：txvContext.replay(vid)，接受一个参数，需要重播的vid
-   骚操作，可以通过给vid前面或者后面加空格触发重播而不调用replay方法，如：vid+=" ";this.setData({vid})
-```
-
-### 版本功能迭代
-1. V1.2.4及之前版本
-    * 全局只播放一个视频，并且视频滑出可见区域自动停止播放
-    * 支持slot
-    * 支持竖屏，海报
-    * 支持广告暂停和全屏
-2. V1.2.5
-    * 支持全屏下设置亮度
-    * 支持全屏下切换清晰度
-3. V1.3.3
-    * cover-view改为view
-
-### 常见问题
-1. 找不到playerid为txv1的txv-video组件
-要注意在小程序根目录`app.json`里声明对组件的依赖，在页面的json里声明对插件的使用。详见[官方文档](https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/using.html)与[示例项目](https://github.com/tvfe/txv-miniprogram-plugin)
-
-2. 常见视频播放错误
-    * 播放器提示是P.0开头表示捕获到video的binderror事件，
-      可能的原因是MEDIA_ERR_SRC_NOT_SUPPORTED；MEDIA_ERR_DECODE；MEDIA_ERR_NETWORK
-    * 播放器提示是G.开头，是接口错误，后面提示的数字是返回的错误码
-    * 播放器提示是L开头，大概率是触发了逻辑错误
-
-3. 直播相关的问题
-    * 弹幕能力目前无法在真机上支持，已知iOS真机无法显示和发送弹幕，请使用官方的miniprogram-barrage实现
-    * 安卓平台部分机型会显示进度条，iOS无显示。
-
-
-### tips
-1. playerid必须要全局唯一，可以设置为vid
-2. 想实现点击视频任何区域，实现视频全屏，经测试发现ios下，部分机型不能正常捕获到video或者容器的tap事件，推荐视频区域不要用video，假写成一张图片和一个播放按钮，点击的时候全屏播放视频
-3. ```const TxvContext = requirePlugin("tencentvideo");``` 可以打印TxvContext，插件暴露的接口都在这里面
-4. 强烈建议在拿到vid后在渲染视频组件 ```<txv-video vid="{{vid}}" wx:if="{{vid}}" playerid="{{vid}}"></txv-video>``` 否则会报错，因为视频组件初始化一定要给vid
-
-### Q&A
-- Q. 谁不能使用这个插件?
-- A. 个人开发者不能使用视频插件，即使使用了，按理说提审会被拒绝
-- Q. 视频播放资质问题？
-- A. 使用视频插件播放不要求小程序主体具有文娱=》视频资质是因为视频插件具有文娱=》视频资质了，如果小程序主体还有用其他方式播放视频，那也需要文娱=》视频资质的。需要注意，如果小程序主体还有其他的需要资质功能，需要自己去办理，[详细资质请看](https://developers.weixin.qq.com/miniprogram/product/material/)
-- Q. 视频来源
-- A. 禁止盗播腾讯视频版权视频，盗播是不能正常播放的，其他视频可以免费播放
+1. 组件层级（z-index）
+   1. 正在播放的video标签`z-index: 1`
+   2. 用于预加载的后台video标签`z-index: 0`
+   3. 唤起控制栏/手势操作的捕获层`z-index: 3`
+   4. 错误页`z-index: 10`
+   5. 左上角返回按钮`z-index: 2`
+   6. 上方toast区域`z-index: 1`
