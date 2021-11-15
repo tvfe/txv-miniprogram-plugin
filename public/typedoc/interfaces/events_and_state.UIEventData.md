@@ -17,16 +17,8 @@
 
 • **component**: `string`
 
-#### Defined in
-
-plugin/enums.ts:9
-
 ___
 
 ### data
 
 • **data**: `any`
-
-#### Defined in
-
-plugin/enums.ts:10

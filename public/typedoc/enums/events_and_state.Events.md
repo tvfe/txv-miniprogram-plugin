@@ -47,10 +47,6 @@
 
 广告资源全部加载完成
 
-#### Defined in
-
-plugin/enums.ts:362
-
 ___
 
 ### AD\_ASSETS\_START
@@ -58,10 +54,6 @@ ___
 • **AD\_ASSETS\_START** = `"adAssetsStart"`
 
 广告资源加载开始
-
-#### Defined in
-
-plugin/enums.ts:358
 
 ___
 
@@ -71,10 +63,6 @@ ___
 
 广告播放完成
 
-#### Defined in
-
-plugin/enums.ts:378
-
 ___
 
 ### AD\_PAUSE
@@ -82,10 +70,6 @@ ___
 • **AD\_PAUSE** = `"adPause"`
 
 广告暂停
-
-#### Defined in
-
-plugin/enums.ts:374
 
 ___
 
@@ -95,10 +79,6 @@ ___
 
 广告开始播放
 
-#### Defined in
-
-plugin/enums.ts:370
-
 ___
 
 ### AD\_REQ\_INFO\_END
@@ -106,10 +86,6 @@ ___
 • **AD\_REQ\_INFO\_END** = `"adReqInfoEnd"`
 
 广告信息请求结束
-
-#### Defined in
-
-plugin/enums.ts:354
 
 ___
 
@@ -119,10 +95,6 @@ ___
 
 开始请求广告信息
 
-#### Defined in
-
-plugin/enums.ts:350
-
 ___
 
 ### AD\_TIMEUPDATE
@@ -130,10 +102,6 @@ ___
 • **AD\_TIMEUPDATE** = `"adTimeupdate"`
 
 广告播放时间变化
-
-#### Defined in
-
-plugin/enums.ts:366
 
 ___
 
@@ -143,10 +111,6 @@ ___
 
 播放内容变更（切换vid）
 
-#### Defined in
-
-plugin/enums.ts:382
-
 ___
 
 ### PLAY\_SESSION\_END
@@ -154,10 +118,6 @@ ___
 • **PLAY\_SESSION\_END** = `"sessionEnd"`
 
 播放流程结束
-
-#### Defined in
-
-plugin/enums.ts:278
 
 ___
 
@@ -167,10 +127,6 @@ ___
 
 播放流程开始
 
-#### Defined in
-
-plugin/enums.ts:274
-
 ___
 
 ### VIDEO\_BUFFERING
@@ -178,10 +134,6 @@ ___
 • **VIDEO\_BUFFERING** = `"videoBuffering"`
 
 正片二次缓冲
-
-#### Defined in
-
-plugin/enums.ts:326
 
 ___
 
@@ -191,10 +143,6 @@ ___
 
 正片视频资源可起播
 
-#### Defined in
-
-plugin/enums.ts:314
-
 ___
 
 ### VIDEO\_DURATION\_CHANGE
@@ -202,10 +150,6 @@ ___
 • **VIDEO\_DURATION\_CHANGE** = `"videoDurationChange"`
 
 正片视频资源时长变化
-
-#### Defined in
-
-plugin/enums.ts:302
 
 ___
 
@@ -215,10 +159,6 @@ ___
 
 正片播放完成
 
-#### Defined in
-
-plugin/enums.ts:346
-
 ___
 
 ### VIDEO\_LOAD\_PROGRESS
@@ -226,10 +166,6 @@ ___
 • **VIDEO\_LOAD\_PROGRESS** = `"videoLoadProgress"`
 
 正片视频资源缓冲变化
-
-#### Defined in
-
-plugin/enums.ts:294
 
 ___
 
@@ -239,10 +175,6 @@ ___
 
 正片视频资源开始加载
 
-#### Defined in
-
-plugin/enums.ts:290
-
 ___
 
 ### VIDEO\_METADATA\_CHANGE
@@ -250,10 +182,6 @@ ___
 • **VIDEO\_METADATA\_CHANGE** = `"videoMetadataChange"`
 
 正片视频资源元信息变化
-
-#### Defined in
-
-plugin/enums.ts:298
 
 ___
 
@@ -263,10 +191,6 @@ ___
 
 正片暂停
 
-#### Defined in
-
-plugin/enums.ts:322
-
 ___
 
 ### VIDEO\_PLAYING
@@ -274,10 +198,6 @@ ___
 • **VIDEO\_PLAYING** = `"videoPlaying"`
 
 正片起播
-
-#### Defined in
-
-plugin/enums.ts:318
 
 ___
 
@@ -287,10 +207,6 @@ ___
 
 正片播放倍速变化
 
-#### Defined in
-
-plugin/enums.ts:310
-
 ___
 
 ### VIDEO\_REQ\_INFO\_END
@@ -298,10 +214,6 @@ ___
 • **VIDEO\_REQ\_INFO\_END** = `"videoReqInfoEnd"`
 
 视频资源地址请求结束
-
-#### Defined in
-
-plugin/enums.ts:286
 
 ___
 
@@ -311,10 +223,6 @@ ___
 
 开始请求视频资源地址
 
-#### Defined in
-
-plugin/enums.ts:282
-
 ___
 
 ### VIDEO\_SEEKED
@@ -322,10 +230,6 @@ ___
 • **VIDEO\_SEEKED** = `"videoSeeked"`
 
 正片设定播放时间完成
-
-#### Defined in
-
-plugin/enums.ts:334
 
 ___
 
@@ -335,10 +239,6 @@ ___
 
 正片设定播放时间点
 
-#### Defined in
-
-plugin/enums.ts:330
-
 ___
 
 ### VIDEO\_SETLEVEL\_END
@@ -346,10 +246,6 @@ ___
 • **VIDEO\_SETLEVEL\_END** = `"videoSetLevelEnd"`
 
 正片设定清晰度完成
-
-#### Defined in
-
-plugin/enums.ts:342
 
 ___
 
@@ -359,10 +255,6 @@ ___
 
 正片设定清晰度
 
-#### Defined in
-
-plugin/enums.ts:338
-
 ___
 
 ### VIDEO\_TIMEUPDATE
@@ -370,7 +262,3 @@ ___
 • **VIDEO\_TIMEUPDATE** = `"videoTimeupdate"`
 
 正片播放时间变化
-
-#### Defined in
-
-plugin/enums.ts:306

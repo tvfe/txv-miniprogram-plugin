@@ -64,10 +64,6 @@ thumbplayer-miniprogram 全局实例管理和api
 | `restoreState` | () => `void` |
 | `saveState` | () => `void` |
 
-#### Defined in
-
-plugin/index.ts:23
-
 ## Methods
 
 ### attach
@@ -87,10 +83,6 @@ plugin/index.ts:23
 
 `void`
 
-#### Defined in
-
-plugin/index.ts:61
-
 ___
 
 ### closeLog
@@ -103,10 +95,6 @@ ___
 #### Returns
 
 `void`
-
-#### Defined in
-
-plugin/index.ts:187
 
 ___
 
@@ -125,10 +113,6 @@ ___
 #### Returns
 
 `void`
-
-#### Defined in
-
-plugin/index.ts:70
 
 ___
 
@@ -149,10 +133,6 @@ ___
 
 `void`
 
-#### Defined in
-
-plugin/index.ts:150
-
 ___
 
 ### get
@@ -171,10 +151,6 @@ ___
 
 [`PlayerController`](player.PlayerController.md)
 
-#### Defined in
-
-plugin/index.ts:78
-
 ___
 
 ### getAllContext
@@ -186,10 +162,6 @@ ___
 #### Returns
 
 `void`
-
-#### Defined in
-
-plugin/index.ts:162
 
 ___
 
@@ -205,10 +177,6 @@ ___
 
 cookie
 
-#### Defined in
-
-plugin/index.ts:118
-
 ___
 
 ### getCookieAsString
@@ -223,10 +191,6 @@ ___
 
 cookie
 
-#### Defined in
-
-plugin/index.ts:125
-
 ___
 
 ### getLastPlayId
@@ -238,10 +202,6 @@ ___
 #### Returns
 
 `void`
-
-#### Defined in
-
-plugin/index.ts:166
 
 ___
 
@@ -265,10 +225,6 @@ Object {osPlatform, libVer, clientVer, deviceModel, host}
 | `libVer` | `string` |
 | `osPlatform` | `string` |
 
-#### Defined in
-
-plugin/index.ts:46
-
 ___
 
 ### getTxvContext
@@ -288,10 +244,6 @@ ___
 
 [`PlayerController`](player.PlayerController.md)
 
-#### Defined in
-
-plugin/index.ts:142
-
 ___
 
 ### isDrmSupported
@@ -303,10 +255,6 @@ ___
 #### Returns
 
 `void`
-
-#### Defined in
-
-plugin/index.ts:85
 
 ___
 
@@ -320,10 +268,6 @@ ___
 #### Returns
 
 `void`
-
-#### Defined in
-
-plugin/index.ts:179
 
 ___
 
@@ -340,10 +284,6 @@ ___
 #### Returns
 
 `void`
-
-#### Defined in
-
-plugin/index.ts:88
 
 ___
 
@@ -362,10 +302,6 @@ ___
 #### Returns
 
 `void`
-
-#### Defined in
-
-plugin/index.ts:170
 
 ___
 
@@ -386,10 +322,6 @@ ___
 
 `void`
 
-#### Defined in
-
-plugin/index.ts:135
-
 ___
 
 ### setTvpPlayState
@@ -408,10 +340,6 @@ ___
 #### Returns
 
 `void`
-
-#### Defined in
-
-plugin/index.ts:174
 
 ___
 
@@ -432,10 +360,6 @@ ___
 
 `void`
 
-#### Defined in
-
-plugin/index.ts:154
-
 ___
 
 ### txvDetached
@@ -453,7 +377,3 @@ ___
 #### Returns
 
 `void`
-
-#### Defined in
-
-plugin/index.ts:158

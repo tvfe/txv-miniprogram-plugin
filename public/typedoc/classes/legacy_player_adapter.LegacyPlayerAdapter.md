@@ -64,10 +64,6 @@
 
 PlayerController.constructor
 
-#### Defined in
-
-plugin/components/player/adapter.ts:61
-
 ## Accessors
 
 ### currentDefinition
@@ -79,10 +75,6 @@ plugin/components/player/adapter.ts:61
 #### Returns
 
 [`Definition`](../modules/txv_info.md#definition)
-
-#### Defined in
-
-plugin/components/player/controller.ts:203
 
 ___
 
@@ -96,10 +88,6 @@ ___
 
 [`VideoInfo`](video_info.VideoInfo.md)
 
-#### Defined in
-
-plugin/components/player/controller.ts:216
-
 ___
 
 ### definitions
@@ -111,10 +99,6 @@ ___
 #### Returns
 
 [`Definition`](../modules/txv_info.md#definition)[]
-
-#### Defined in
-
-plugin/components/player/controller.ts:196
 
 ___
 
@@ -128,10 +112,6 @@ ___
 
 `boolean`
 
-#### Defined in
-
-plugin/components/player/controller.ts:234
-
 ___
 
 ### isAd
@@ -143,10 +123,6 @@ ___
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-plugin/components/player/controller.ts:257
 
 ___
 
@@ -160,10 +136,6 @@ ___
 
 ``"vod"`` \| ``"live"``
 
-#### Defined in
-
-plugin/components/player/controller.ts:181
-
 ___
 
 ### playbackRate
@@ -175,10 +147,6 @@ ___
 #### Returns
 
 `number`
-
-#### Defined in
-
-plugin/components/player/controller.ts:244
 
 • `set` **playbackRate**(`val`): `void`
 
@@ -194,10 +162,6 @@ plugin/components/player/controller.ts:244
 
 `void`
 
-#### Defined in
-
-plugin/components/player/controller.ts:252
-
 ___
 
 ### played
@@ -209,10 +173,6 @@ ___
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-plugin/components/player/controller.ts:262
 
 ___
 
@@ -226,10 +186,6 @@ ___
 
 `number`
 
-#### Defined in
-
-plugin/components/player/controller.ts:229
-
 ___
 
 ### state
@@ -241,10 +197,6 @@ ___
 #### Returns
 
 [`VideoState`](../enums/events_and_state.VideoState.md)
-
-#### Defined in
-
-plugin/components/player/controller.ts:239
 
 ## Methods
 
@@ -262,10 +214,6 @@ plugin/components/player/controller.ts:239
 
 [PlayerController](player.PlayerController.md).[destroy](player.PlayerController.md#destroy)
 
-#### Defined in
-
-plugin/components/player/adapter.ts:78
-
 ___
 
 ### exitFullScreen
@@ -278,10 +226,6 @@ ___
 #### Returns
 
 `void`
-
-#### Defined in
-
-plugin/components/player/adapter.ts:104
 
 ___
 
@@ -306,10 +250,6 @@ ___
 
 [PlayerController](player.PlayerController.md).[hookAfter](player.PlayerController.md#hookafter)
 
-#### Defined in
-
-plugin/components/player/controller.ts:334
-
 ___
 
 ### hookBefore
@@ -333,10 +273,6 @@ ___
 
 [PlayerController](player.PlayerController.md).[hookBefore](player.PlayerController.md#hookbefore)
 
-#### Defined in
-
-plugin/components/player/controller.ts:326
-
 ___
 
 ### pause
@@ -352,10 +288,6 @@ ___
 #### Inherited from
 
 [PlayerController](player.PlayerController.md).[pause](player.PlayerController.md#pause)
-
-#### Defined in
-
-plugin/components/player/controller.ts:425
 
 ___
 
@@ -383,10 +315,6 @@ ___
 
 [PlayerController](player.PlayerController.md).[play](player.PlayerController.md#play)
 
-#### Defined in
-
-plugin/components/player/controller.ts:364
-
 ___
 
 ### replay
@@ -403,10 +331,6 @@ ___
 
 [PlayerController](player.PlayerController.md).[replay](player.PlayerController.md#replay)
 
-#### Defined in
-
-plugin/components/player/controller.ts:339
-
 ___
 
 ### requestFullScreen
@@ -419,10 +343,6 @@ ___
 #### Returns
 
 `void`
-
-#### Defined in
-
-plugin/components/player/adapter.ts:96
 
 ___
 
@@ -446,10 +366,6 @@ ___
 
 [PlayerController](player.PlayerController.md).[seek](player.PlayerController.md#seek)
 
-#### Defined in
-
-plugin/components/player/controller.ts:435
-
 ___
 
 ### setLevel
@@ -472,10 +388,6 @@ ___
 
 [PlayerController](player.PlayerController.md).[setLevel](player.PlayerController.md#setlevel)
 
-#### Defined in
-
-plugin/components/player/controller.ts:473
-
 ___
 
 ### start
@@ -492,10 +404,6 @@ ___
 
 [PlayerController](player.PlayerController.md).[start](player.PlayerController.md#start)
 
-#### Defined in
-
-plugin/components/player/controller.ts:349
-
 ___
 
 ### stop
@@ -511,10 +419,6 @@ ___
 #### Inherited from
 
 [PlayerController](player.PlayerController.md).[stop](player.PlayerController.md#stop)
-
-#### Defined in
-
-plugin/components/player/controller.ts:443
 
 ___
 
@@ -534,10 +438,6 @@ ___
 #### Returns
 
 `Promise`<`void`\>
-
-#### Defined in
-
-plugin/components/player/adapter.ts:88
 
 ___
 
@@ -560,7 +460,3 @@ ___
 #### Inherited from
 
 [PlayerController](player.PlayerController.md).[toggleFullscreen](player.PlayerController.md#togglefullscreen)
-
-#### Defined in
-
-plugin/components/player/controller.ts:463

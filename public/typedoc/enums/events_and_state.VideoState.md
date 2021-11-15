@@ -28,10 +28,6 @@
 
 二次缓冲
 
-#### Defined in
-
-plugin/enums.ts:49
-
 ___
 
 ### CANPLAY
@@ -39,10 +35,6 @@ ___
 • **CANPLAY** = `"canplay"`
 
 小程序端对应loadedmetadata状态
-
-#### Defined in
-
-plugin/enums.ts:39
 
 ___
 
@@ -52,10 +44,6 @@ ___
 
 结束
 
-#### Defined in
-
-plugin/enums.ts:51
-
 ___
 
 ### IDLE
@@ -63,10 +51,6 @@ ___
 • **IDLE** = `"idle"`
 
 空闲
-
-#### Defined in
-
-plugin/enums.ts:35
 
 ___
 
@@ -76,10 +60,6 @@ ___
 
 开始加载
 
-#### Defined in
-
-plugin/enums.ts:37
-
 ___
 
 ### PAUSE
@@ -87,10 +67,6 @@ ___
 • **PAUSE** = `"pause"`
 
 暂停
-
-#### Defined in
-
-plugin/enums.ts:43
 
 ___
 
@@ -100,10 +76,6 @@ ___
 
 播放中
 
-#### Defined in
-
-plugin/enums.ts:41
-
 ___
 
 ### SEEKED
@@ -112,10 +84,6 @@ ___
 
 跳转完成
 
-#### Defined in
-
-plugin/enums.ts:47
-
 ___
 
 ### SEEKING
@@ -123,7 +91,3 @@ ___
 • **SEEKING** = `"seeking"`
 
 跳转中
-
-#### Defined in
-
-plugin/enums.ts:45

@@ -45,19 +45,11 @@
 
 • **adAssetsLoaded**: `undefined`
 
-#### Defined in
-
-plugin/enums.ts:145
-
 ___
 
 ### adAssetsStart
 
 • **adAssetsStart**: `undefined`
-
-#### Defined in
-
-plugin/enums.ts:144
 
 ___
 
@@ -72,19 +64,11 @@ ___
 | `code` | `string` |
 | `message?` | `string` |
 
-#### Defined in
-
-plugin/enums.ts:149
-
 ___
 
 ### adPause
 
 • **adPause**: `undefined`
-
-#### Defined in
-
-plugin/enums.ts:148
 
 ___
 
@@ -100,10 +84,6 @@ isFirst - 是否第一次开播
 | :------ | :------ |
 | `isFirst` | `boolean` |
 
-#### Defined in
-
-plugin/enums.ts:147
-
 ___
 
 ### adReqInfoEnd
@@ -117,19 +97,11 @@ ___
 | `adInfo?` | `any` |
 | `code` | `string` |
 
-#### Defined in
-
-plugin/enums.ts:143
-
 ___
 
 ### adReqInfoStart
 
 • **adReqInfoStart**: `undefined`
-
-#### Defined in
-
-plugin/enums.ts:142
 
 ___
 
@@ -143,10 +115,6 @@ ___
 | :------ | :------ |
 | `time` | `number` |
 
-#### Defined in
-
-plugin/enums.ts:150
-
 ___
 
 ### playContentChange
@@ -158,10 +126,6 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `isAd` | `boolean` |
-
-#### Defined in
-
-plugin/enums.ts:168
 
 ___
 
@@ -177,19 +141,11 @@ ___
 | `isUserStop` | `boolean` |
 | `message?` | `string` |
 
-#### Defined in
-
-plugin/enums.ts:141
-
 ___
 
 ### sessionStart
 
 • **sessionStart**: `undefined`
-
-#### Defined in
-
-plugin/enums.ts:140
 
 ___
 
@@ -197,19 +153,11 @@ ___
 
 • **videoBuffering**: `undefined`
 
-#### Defined in
-
-plugin/enums.ts:162
-
 ___
 
 ### videoCanplay
 
 • **videoCanplay**: `undefined`
-
-#### Defined in
-
-plugin/enums.ts:159
 
 ___
 
@@ -222,10 +170,6 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `duration` | `number` |
-
-#### Defined in
-
-plugin/enums.ts:155
 
 ___
 
@@ -240,10 +184,6 @@ ___
 | `code` | `string` |
 | `message?` | `string` |
 
-#### Defined in
-
-plugin/enums.ts:167
-
 ___
 
 ### videoLoadProgress
@@ -256,19 +196,11 @@ ___
 | :------ | :------ |
 | `progress` | `number` |
 
-#### Defined in
-
-plugin/enums.ts:154
-
 ___
 
 ### videoLoadStart
 
 • **videoLoadStart**: `undefined`
-
-#### Defined in
-
-plugin/enums.ts:153
 
 ___
 
@@ -283,19 +215,11 @@ ___
 | `height` | `number` |
 | `width` | `number` |
 
-#### Defined in
-
-plugin/enums.ts:156
-
 ___
 
 ### videoPause
 
 • **videoPause**: `undefined`
-
-#### Defined in
-
-plugin/enums.ts:161
 
 ___
 
@@ -309,10 +233,6 @@ ___
 | :------ | :------ |
 | `isFirst` | `boolean` |
 
-#### Defined in
-
-plugin/enums.ts:160
-
 ___
 
 ### videoRateChange
@@ -324,10 +244,6 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `rate` | `number` |
-
-#### Defined in
-
-plugin/enums.ts:158
 
 ___
 
@@ -342,19 +258,11 @@ ___
 | `code` | `string` |
 | `message?` | `string` |
 
-#### Defined in
-
-plugin/enums.ts:152
-
 ___
 
 ### videoReqInfoStart
 
 • **videoReqInfoStart**: `undefined`
-
-#### Defined in
-
-plugin/enums.ts:151
 
 ___
 
@@ -362,19 +270,11 @@ ___
 
 • **videoSeeked**: `undefined`
 
-#### Defined in
-
-plugin/enums.ts:164
-
 ___
 
 ### videoSeeking
 
 • **videoSeeking**: `undefined`
-
-#### Defined in
-
-plugin/enums.ts:163
 
 ___
 
@@ -389,10 +289,6 @@ ___
 | `code` | `string` |
 | `level` | `string` |
 
-#### Defined in
-
-plugin/enums.ts:166
-
 ___
 
 ### videoSetLevelStart
@@ -406,10 +302,6 @@ ___
 | `currentLevel` | `string` |
 | `level` | `string` |
 
-#### Defined in
-
-plugin/enums.ts:165
-
 ___
 
 ### videoTimeupdate
@@ -421,7 +313,3 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `time` | `number` |
-
-#### Defined in
-
-plugin/enums.ts:157

@@ -28,10 +28,6 @@
 | `resolution` | `string` | 清晰度 720p/1080p |
 | `selected` | `boolean` | 是否当前选中 |
 
-#### Defined in
-
-plugin/modules/getinfo/enum.ts:5
-
 ___
 
 ### GetInfoResult
@@ -50,7 +46,3 @@ ___
 | `urls` | `string`[] | 地址列表，第一个为默认加载 |
 | `watermarks` | `any`[] | 水印列表，未实现 |
 | `width` | `number` | 视频宽度 |
-
-#### Defined in
-
-plugin/modules/getinfo/enum.ts:20

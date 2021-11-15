@@ -19,7 +19,3 @@
 播放器可以接受的属性。
 
 支持部分video标签属性透传，这部分的默认值及定义请参考官方文档 https://developers.weixin.qq.com/miniprogram/dev/component/video.html
-
-#### Defined in
-
-plugin/components/player/types.d.ts:28

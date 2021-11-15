@@ -36,10 +36,6 @@
 | :------ | :------ |
 | `config` | `IUrlConfig` |
 
-#### Defined in
-
-plugin/modules/video-info/index.ts:113
-
 ## Properties
 
 ### error
@@ -47,10 +43,6 @@ plugin/modules/video-info/index.ts:113
 • **error**: `any` = `null`
 
 错误信息，如果不为null则表示播放过程中出现了错误
-
-#### Defined in
-
-plugin/modules/video-info/index.ts:53
 
 ___
 
@@ -60,10 +52,6 @@ ___
 
 当前播放时间
 
-#### Defined in
-
-plugin/modules/video-info/index.ts:49
-
 ___
 
 ### preloaded
@@ -71,10 +59,6 @@ ___
 • **preloaded**: `boolean` = `false`
 
 是否预加载完成
-
-#### Defined in
-
-plugin/modules/video-info/index.ts:70
 
 ## Accessors
 
@@ -88,10 +72,6 @@ plugin/modules/video-info/index.ts:70
 
 `string`[]
 
-#### Defined in
-
-plugin/modules/video-info/index.ts:110
-
 ___
 
 ### duration
@@ -104,10 +84,6 @@ ___
 
 `number`
 
-#### Defined in
-
-plugin/modules/video-info/index.ts:97
-
 ___
 
 ### loadingUrl
@@ -119,7 +95,3 @@ ___
 #### Returns
 
 `string`
-
-#### Defined in
-
-plugin/modules/video-info/index.ts:103

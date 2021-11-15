@@ -20,26 +20,14 @@
 
 • **GETINFO** = `"getinfo"`
 
-#### Defined in
-
-plugin/enums.ts:435
-
 ___
 
 ### PLAY
 
 • **PLAY** = `"play"`
 
-#### Defined in
-
-plugin/enums.ts:434
-
 ___
 
 ### SET\_LEVEL
 
 • **SET\_LEVEL** = `"setLevel"`
-
-#### Defined in
-
-plugin/enums.ts:436

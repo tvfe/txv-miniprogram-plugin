@@ -31,7 +31,3 @@
 | `hooks?` | `Record`<[`HookType`](../enums/events_and_state.HookType.md), `Object`\> | - |
 | `maxRetryCount?` | `number` | 最大重试次数 |
 | `mode` | ``"vod"`` \| ``"live"`` | 直播点播 |
-
-#### Defined in
-
-plugin/components/player/controller.ts:45

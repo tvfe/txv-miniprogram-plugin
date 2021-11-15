@@ -53,10 +53,6 @@
 
 [`Definition`](../modules/txv_info.md#definition)
 
-#### Defined in
-
-plugin/components/player/controller.ts:203
-
 ___
 
 ### currentVideoInfo
@@ -68,10 +64,6 @@ ___
 #### Returns
 
 [`VideoInfo`](video_info.VideoInfo.md)
-
-#### Defined in
-
-plugin/components/player/controller.ts:216
 
 ___
 
@@ -85,10 +77,6 @@ ___
 
 [`Definition`](../modules/txv_info.md#definition)[]
 
-#### Defined in
-
-plugin/components/player/controller.ts:196
-
 ___
 
 ### fullScreen
@@ -100,10 +88,6 @@ ___
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-plugin/components/player/controller.ts:234
 
 ___
 
@@ -117,10 +101,6 @@ ___
 
 `boolean`
 
-#### Defined in
-
-plugin/components/player/controller.ts:257
-
 ___
 
 ### mode
@@ -133,10 +113,6 @@ ___
 
 ``"vod"`` \| ``"live"``
 
-#### Defined in
-
-plugin/components/player/controller.ts:181
-
 ___
 
 ### playbackRate
@@ -148,10 +124,6 @@ ___
 #### Returns
 
 `number`
-
-#### Defined in
-
-plugin/components/player/controller.ts:244
 
 • `set` **playbackRate**(`val`): `void`
 
@@ -167,10 +139,6 @@ plugin/components/player/controller.ts:244
 
 `void`
 
-#### Defined in
-
-plugin/components/player/controller.ts:252
-
 ___
 
 ### played
@@ -182,10 +150,6 @@ ___
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-plugin/components/player/controller.ts:262
 
 ___
 
@@ -199,10 +163,6 @@ ___
 
 `number`
 
-#### Defined in
-
-plugin/components/player/controller.ts:229
-
 ___
 
 ### state
@@ -214,10 +174,6 @@ ___
 #### Returns
 
 [`VideoState`](../enums/events_and_state.VideoState.md)
-
-#### Defined in
-
-plugin/components/player/controller.ts:239
 
 ## Methods
 
@@ -234,10 +190,6 @@ plugin/components/player/controller.ts:239
 #### Overrides
 
 EventProxy.destroy
-
-#### Defined in
-
-plugin/components/player/controller.ts:311
 
 ___
 
@@ -258,10 +210,6 @@ ___
 
 `void`
 
-#### Defined in
-
-plugin/components/player/controller.ts:334
-
 ___
 
 ### hookBefore
@@ -281,10 +229,6 @@ ___
 
 `void`
 
-#### Defined in
-
-plugin/components/player/controller.ts:326
-
 ___
 
 ### pause
@@ -296,10 +240,6 @@ ___
 #### Returns
 
 `void`
-
-#### Defined in
-
-plugin/components/player/controller.ts:425
 
 ___
 
@@ -323,10 +263,6 @@ ___
 
 `Promise`<`void`\>
 
-#### Defined in
-
-plugin/components/player/controller.ts:364
-
 ___
 
 ### replay
@@ -338,10 +274,6 @@ ___
 #### Returns
 
 `void`
-
-#### Defined in
-
-plugin/components/player/controller.ts:339
 
 ___
 
@@ -361,10 +293,6 @@ ___
 
 `void`
 
-#### Defined in
-
-plugin/components/player/controller.ts:435
-
 ___
 
 ### setLevel
@@ -383,10 +311,6 @@ ___
 
 `Promise`<`void`\>
 
-#### Defined in
-
-plugin/components/player/controller.ts:473
-
 ___
 
 ### start
@@ -399,10 +323,6 @@ ___
 
 `Promise`<`void`\>
 
-#### Defined in
-
-plugin/components/player/controller.ts:349
-
 ___
 
 ### stop
@@ -414,10 +334,6 @@ ___
 #### Returns
 
 `void`
-
-#### Defined in
-
-plugin/components/player/controller.ts:443
 
 ___
 
@@ -436,7 +352,3 @@ ___
 #### Returns
 
 `void`
-
-#### Defined in
-
-plugin/components/player/controller.ts:463

@@ -39,7 +39,3 @@
 | `onAfterGetInfo` | (...`args`: `any`[]) => `Promise`<`any`\> |
 | `onBeforeGetInfo` | (...`args`: `any`[]) => `Promise`<`any`\> |
 | `onBeforeSwitchDefn` | (...`args`: `any`[]) => `Promise`<`any`\> |
-
-#### Defined in
-
-plugin/components/player/adapter.ts:15
