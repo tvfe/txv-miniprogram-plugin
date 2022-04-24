@@ -1,4 +1,4 @@
-[thumbplayer-miniprogram - v2.0.0](../README.md) / plugin-js-exports
+[thumbplayer-miniprogram - v2.0.11](../README.md) / plugin-js-exports
 
 # Module: plugin-js-exports
 

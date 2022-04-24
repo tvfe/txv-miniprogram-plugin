@@ -1,4 +1,4 @@
-[thumbplayer-miniprogram - v2.0.0](../README.md) / player
+[thumbplayer-miniprogram - v2.0.11](../README.md) / player
 
 # Module: player
 
@@ -13,6 +13,9 @@
 ### Type aliases
 
 - [IPlayerConfig](player.md#iplayerconfig)
+- [LivePlayItem](player.md#liveplayitem)
+- [PlayItem](player.md#playitem)
+- [VodPlayItem](player.md#vodplayitem)
 
 ## Type aliases
 
@@ -30,4 +33,28 @@
 | `defn?` | `string` | 起播指定的清晰度 |
 | `hooks?` | `Record`<[`HookType`](../enums/events_and_state.HookType.md), `Object`\> | - |
 | `maxRetryCount?` | `number` | 最大重试次数 |
-| `mode` | ``"vod"`` \| ``"live"`` | 直播点播 |
+
+___
+
+### LivePlayItem
+
+Ƭ **LivePlayItem**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `cnlid` | `string` |
+| `livepid` | `string` |
+
+___
+
+### PlayItem
+
+Ƭ **PlayItem**: [`VodPlayItem`](player.md#vodplayitem) \| [`LivePlayItem`](player.md#liveplayitem)
+
+___
+
+### VodPlayItem
+
+Ƭ **VodPlayItem**: `string`

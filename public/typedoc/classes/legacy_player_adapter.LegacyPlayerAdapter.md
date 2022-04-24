@@ -1,4 +1,4 @@
-[thumbplayer-miniprogram - v2.0.0](../README.md) / [legacy-player-adapter](../modules/legacy_player_adapter.md) / LegacyPlayerAdapter
+[thumbplayer-miniprogram - v2.0.11](../README.md) / [legacy-player-adapter](../modules/legacy_player_adapter.md) / LegacyPlayerAdapter
 
 # Class: LegacyPlayerAdapter
 
@@ -21,6 +21,7 @@
 - [currentDefinition](legacy_player_adapter.LegacyPlayerAdapter.md#currentdefinition)
 - [currentVideoInfo](legacy_player_adapter.LegacyPlayerAdapter.md#currentvideoinfo)
 - [definitions](legacy_player_adapter.LegacyPlayerAdapter.md#definitions)
+- [duration](legacy_player_adapter.LegacyPlayerAdapter.md#duration)
 - [fullScreen](legacy_player_adapter.LegacyPlayerAdapter.md#fullscreen)
 - [isAd](legacy_player_adapter.LegacyPlayerAdapter.md#isad)
 - [mode](legacy_player_adapter.LegacyPlayerAdapter.md#mode)
@@ -41,7 +42,6 @@
 - [requestFullScreen](legacy_player_adapter.LegacyPlayerAdapter.md#requestfullscreen)
 - [seek](legacy_player_adapter.LegacyPlayerAdapter.md#seek)
 - [setLevel](legacy_player_adapter.LegacyPlayerAdapter.md#setlevel)
-- [start](legacy_player_adapter.LegacyPlayerAdapter.md#start)
 - [stop](legacy_player_adapter.LegacyPlayerAdapter.md#stop)
 - [switchDefn](legacy_player_adapter.LegacyPlayerAdapter.md#switchdefn)
 - [toggleFullscreen](legacy_player_adapter.LegacyPlayerAdapter.md#togglefullscreen)
@@ -50,15 +50,15 @@
 
 ### constructor
 
-• **new LegacyPlayerAdapter**(`ref`, `legacyConfig?`, `config?`)
+• **new LegacyPlayerAdapter**(`ref`, `legacyConfig`, `config`)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `ref` | `IPlayerComponent` |
-| `legacyConfig?` | `Partial`<[`LegacyParam`](../modules/legacy_player_adapter.md#legacyparam)\> |
-| `config?` | `Partial`<[`IPlayerConfig`](../modules/player.md#iplayerconfig)\> |
+| `legacyConfig` | `Partial`<[`LegacyParam`](../modules/legacy_player_adapter.md#legacyparam)\> |
+| `config` | `Partial`<[`IPlayerConfig`](../modules/player.md#iplayerconfig)\> |
 
 #### Overrides
 
@@ -68,37 +68,49 @@ PlayerController.constructor
 
 ### currentDefinition
 
-• `get` **currentDefinition**(): [`Definition`](../modules/txv_info.md#definition)
+• `get` **currentDefinition**(): `undefined` \| [`Definition`](../modules/txv_info.md#definition)
 
 当前清晰度
 
 #### Returns
 
-[`Definition`](../modules/txv_info.md#definition)
+`undefined` \| [`Definition`](../modules/txv_info.md#definition)
 
 ___
 
 ### currentVideoInfo
 
-• `get` **currentVideoInfo**(): [`VideoInfo`](video_info.VideoInfo.md)
+• `get` **currentVideoInfo**(): ``null`` \| [`VideoInfo`](video_info.VideoInfo.md)
 
 当前视频信息
 
 #### Returns
 
-[`VideoInfo`](video_info.VideoInfo.md)
+``null`` \| [`VideoInfo`](video_info.VideoInfo.md)
 
 ___
 
 ### definitions
 
-• `get` **definitions**(): [`Definition`](../modules/txv_info.md#definition)[]
+• `get` **definitions**(): `undefined` \| [`Definition`](../modules/txv_info.md#definition)[]
 
 当前清晰度列表
 
 #### Returns
 
-[`Definition`](../modules/txv_info.md#definition)[]
+`undefined` \| [`Definition`](../modules/txv_info.md#definition)[]
+
+___
+
+### duration
+
+• `get` **duration**(): `number`
+
+当前视频时长
+
+#### Returns
+
+`number`
 
 ___
 
@@ -279,7 +291,7 @@ ___
 
 ▸ **pause**(): `void`
 
-暂停，直播模式下等同于调用stop
+暂停，直播模式下无效
 
 #### Returns
 
@@ -293,7 +305,7 @@ ___
 
 ### play
 
-▸ **play**(`vid?`, `config?`): `Promise`<`void`\>
+▸ **play**(`playItem?`, `config?`): `Promise`<`void`\>
 
 播放
 1. 无参数时等同于videoContext.play()
@@ -303,7 +315,7 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `vid?` | `string` | 点播视频vid，直播流cnlid |
+| `playItem?` | [`PlayItem`](../modules/player.md#playitem) | 点播视频vid，直播流cnlid |
 | `config?` | `Object` | 播放配置参数 |
 | `config.startTime?` | `number` | 起播时间，单位秒。 |
 
@@ -387,22 +399,6 @@ ___
 #### Inherited from
 
 [PlayerController](player.PlayerController.md).[setLevel](player.PlayerController.md#setlevel)
-
-___
-
-### start
-
-▸ **start**(): `Promise`<`void`\>
-
-开启流程，只在[autoplay](../modules/legacy_player_adapter.md#autoplay)为false时生效。使用组件上的vid开启播放流程。
-
-#### Returns
-
-`Promise`<`void`\>
-
-#### Inherited from
-
-[PlayerController](player.PlayerController.md).[start](player.PlayerController.md#start)
 
 ___
 

@@ -1,4 +1,4 @@
-[thumbplayer-miniprogram - v2.0.0](../README.md) / txv-info
+[thumbplayer-miniprogram - v2.0.11](../README.md) / txv-info
 
 # Module: txv-info
 

@@ -1,6 +1,6 @@
-thumbplayer-miniprogram - v2.0.0
+thumbplayer-miniprogram - v2.0.11
 
-# thumbplayer-miniprogram - v2.0.0
+# thumbplayer-miniprogram - v2.0.11
 
 ## Table of contents
 

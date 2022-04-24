@@ -1,4 +1,4 @@
-[thumbplayer-miniprogram - v2.0.0](../README.md) / legacy-player-adapter
+[thumbplayer-miniprogram - v2.0.11](../README.md) / legacy-player-adapter
 
 # Module: legacy-player-adapter
 
@@ -35,6 +35,7 @@
 | `mode` | ``"live"`` \| ``"vod"`` |
 | `scene` | `number` |
 | `show1080p` | `boolean` |
+| `supportHEVC` | `number` |
 | `getReportParam` | (...`args`: `any`[]) => `any` |
 | `onAfterGetInfo` | (...`args`: `any`[]) => `Promise`<`any`\> |
 | `onBeforeGetInfo` | (...`args`: `any`[]) => `Promise`<`any`\> |

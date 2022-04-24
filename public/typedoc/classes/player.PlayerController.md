@@ -1,4 +1,4 @@
-[thumbplayer-miniprogram - v2.0.0](../README.md) / [player](../modules/player.md) / PlayerController
+[thumbplayer-miniprogram - v2.0.11](../README.md) / [player](../modules/player.md) / PlayerController
 
 # Class: PlayerController
 
@@ -19,6 +19,7 @@
 - [currentDefinition](player.PlayerController.md#currentdefinition)
 - [currentVideoInfo](player.PlayerController.md#currentvideoinfo)
 - [definitions](player.PlayerController.md#definitions)
+- [duration](player.PlayerController.md#duration)
 - [fullScreen](player.PlayerController.md#fullscreen)
 - [isAd](player.PlayerController.md#isad)
 - [mode](player.PlayerController.md#mode)
@@ -37,7 +38,6 @@
 - [replay](player.PlayerController.md#replay)
 - [seek](player.PlayerController.md#seek)
 - [setLevel](player.PlayerController.md#setlevel)
-- [start](player.PlayerController.md#start)
 - [stop](player.PlayerController.md#stop)
 - [toggleFullscreen](player.PlayerController.md#togglefullscreen)
 
@@ -45,37 +45,49 @@
 
 ### currentDefinition
 
-• `get` **currentDefinition**(): [`Definition`](../modules/txv_info.md#definition)
+• `get` **currentDefinition**(): `undefined` \| [`Definition`](../modules/txv_info.md#definition)
 
 当前清晰度
 
 #### Returns
 
-[`Definition`](../modules/txv_info.md#definition)
+`undefined` \| [`Definition`](../modules/txv_info.md#definition)
 
 ___
 
 ### currentVideoInfo
 
-• `get` **currentVideoInfo**(): [`VideoInfo`](video_info.VideoInfo.md)
+• `get` **currentVideoInfo**(): ``null`` \| [`VideoInfo`](video_info.VideoInfo.md)
 
 当前视频信息
 
 #### Returns
 
-[`VideoInfo`](video_info.VideoInfo.md)
+``null`` \| [`VideoInfo`](video_info.VideoInfo.md)
 
 ___
 
 ### definitions
 
-• `get` **definitions**(): [`Definition`](../modules/txv_info.md#definition)[]
+• `get` **definitions**(): `undefined` \| [`Definition`](../modules/txv_info.md#definition)[]
 
 当前清晰度列表
 
 #### Returns
 
-[`Definition`](../modules/txv_info.md#definition)[]
+`undefined` \| [`Definition`](../modules/txv_info.md#definition)[]
+
+___
+
+### duration
+
+• `get` **duration**(): `number`
+
+当前视频时长
+
+#### Returns
+
+`number`
 
 ___
 
@@ -235,7 +247,7 @@ ___
 
 ▸ **pause**(): `void`
 
-暂停，直播模式下等同于调用stop
+暂停，直播模式下无效
 
 #### Returns
 
@@ -245,7 +257,7 @@ ___
 
 ### play
 
-▸ **play**(`vid?`, `config?`): `Promise`<`void`\>
+▸ **play**(`playItem?`, `config?`): `Promise`<`void`\>
 
 播放
 1. 无参数时等同于videoContext.play()
@@ -255,7 +267,7 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `vid?` | `string` | 点播视频vid，直播流cnlid |
+| `playItem?` | [`PlayItem`](../modules/player.md#playitem) | 点播视频vid，直播流cnlid |
 | `config?` | `Object` | 播放配置参数 |
 | `config.startTime?` | `number` | 起播时间，单位秒。 |
 
@@ -306,18 +318,6 @@ ___
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `defn` | `string` | 清晰度名称; sd/hd/fhd等 |
-
-#### Returns
-
-`Promise`<`void`\>
-
-___
-
-### start
-
-▸ **start**(): `Promise`<`void`\>
-
-开启流程，只在[autoplay](../modules/legacy_player_adapter.md#autoplay)为false时生效。使用组件上的vid开启播放流程。
 
 #### Returns
 

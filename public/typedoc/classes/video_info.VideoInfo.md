@@ -1,4 +1,4 @@
-[thumbplayer-miniprogram - v2.0.0](../README.md) / [video-info](../modules/video_info.md) / VideoInfo
+[thumbplayer-miniprogram - v2.0.11](../README.md) / [video-info](../modules/video_info.md) / VideoInfo
 
 # Class: VideoInfo
 

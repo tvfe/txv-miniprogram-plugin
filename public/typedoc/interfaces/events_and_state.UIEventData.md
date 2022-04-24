@@ -1,4 +1,4 @@
-[thumbplayer-miniprogram - v2.0.0](../README.md) / [events-and-state](../modules/events_and_state.md) / UIEventData
+[thumbplayer-miniprogram - v2.0.11](../README.md) / [events-and-state](../modules/events_and_state.md) / UIEventData
 
 # Interface: UIEventData
 

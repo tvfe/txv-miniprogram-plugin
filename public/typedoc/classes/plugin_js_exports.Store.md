@@ -1,4 +1,4 @@
-[thumbplayer-miniprogram - v2.0.0](../README.md) / [plugin-js-exports](../modules/plugin_js_exports.md) / Store
+[thumbplayer-miniprogram - v2.0.11](../README.md) / [plugin-js-exports](../modules/plugin_js_exports.md) / Store
 
 # Class: Store
 
@@ -28,6 +28,8 @@ thumbplayer-miniprogram 全局实例管理和api
 - [getCookie](plugin_js_exports.Store.md#getcookie)
 - [getCookieAsString](plugin_js_exports.Store.md#getcookieasstring)
 - [getLastPlayId](plugin_js_exports.Store.md#getlastplayid)
+- [getNetworkType](plugin_js_exports.Store.md#getnetworktype)
+- [getPlayerVersion](plugin_js_exports.Store.md#getplayerversion)
 - [getSystemInfo](plugin_js_exports.Store.md#getsysteminfo)
 - [getTxvContext](plugin_js_exports.Store.md#gettxvcontext)
 - [isDrmSupported](plugin_js_exports.Store.md#isdrmsupported)
@@ -52,7 +54,7 @@ thumbplayer-miniprogram 全局实例管理和api
 ▪ `Static` **report**: `Object`
 
 **`deprecated`**
-全局上报接口，已废弃
+全局上报接口，已废弃
 
 #### Type declaration
 
@@ -202,6 +204,32 @@ ___
 #### Returns
 
 `void`
+
+___
+
+### getNetworkType
+
+▸ `Static` **getNetworkType**(): `Promise`<`string`\>
+
+网络类型
+
+#### Returns
+
+`Promise`<`string`\>
+
+___
+
+### getPlayerVersion
+
+▸ `Static` **getPlayerVersion**(): `string`
+
+获取播放器版本号
+
+#### Returns
+
+`string`
+
+播放器版本号
 
 ___
 

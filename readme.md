@@ -3,6 +3,15 @@
 适用于手Q和微信小程序的播放器**插件**，开箱即用无需配置。**仅支持播放腾讯视频已上架的资源**。  
 ## 旧版本文档
 [1.x版本文档](https://github.com/tvfe/txv-miniprogram-plugin/blob/master/archieve/readme.md)
+
+## Changelog
+- `v2.1.0`  
+  - multi-slot支持：现在播放器内分为`ui-bottom-left-ctrl-btn`, `ui-bottom-right-ctrl-btn`, `ui-top-right-ctrl-btn`, `default`四个slot，其中`default`与原默认slot位置相同。另外三个对应左下角播控按键的右侧，右下清晰度等选项左侧，以及右上角三处。展示时机同控制栏，**左下右下**仅全屏时显示。
+  - 移除微信默认UI支持
+  - 播放结束的情况下，再次点击播放按钮现在会自动重播
+  - 增加微信原生video同名事件的映射
+  
+
 ## 使用
 
 有关插件的使用请参考微信[官方文档](https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/using.html)。
@@ -31,26 +40,24 @@
 ```html
 <!-- index.wxml -->
 <view>
-   <player-component vid="{{你想要播放的vid}}"/>
+  <player-component vid="{{你想要播放的vid}}">
+      <view slot="bottom-left-ctrl-btn" bind:tap="callback">左下角的自定义按钮</view>
+      <view slot="top-right-ctrl-btn" bind:tap="callback">右上角的自定义按钮</view>
+      <view slot="bottom-right-ctrl-btn" bind:tap="callback">右下角的自定义按钮</view>
+      <view slot="default" bind:tap="callback">默认slot</view>
+  </player-component>
 </view>
 ```
 ```js
 // index.js
 const store = requirePlugin('player')
 ```
-## 1.x版本和2.0版本的区别
-
-[2.0迁移指南](https://github.com/tvfe/txv-miniprogram-plugin/blob/master/public/transition.md)
-
-由于1.x版本诞生于小程序的早期，为了实现部分功能不得不使用了一些hack逻辑且文档上比较缺失。所以播放器插件在2.0版本进行了一次彻底的重构，完全替换为`typescript`，提供完整的类型支持和接口文档。同时也提供了定制的ui、支持外部自定义组件扩展、多video标签预加载、更规范和详细的事件等改进。如果你有希望加入的功能或迁移中遇到了困难，欢迎向我们提issue！
-
-为了方便已有用户的接入，我们也提供了适配层。在开启适配层的情况下**绝大部分**接口调用及事件监听将和1.x版本保持一致，而对于不兼容的部分我们也提供解决方案，详见[迁移文档](https://github.com/tvfe/txv-miniprogram-plugin/tree/master/public/typedoc)。同时，适配层也和新版本的接口及事件兼容，在保证使用的前提下你也可以体验2.0版本带来的新接口，新事件。
-
-> 2.1版本后将不再进行针对适配层接口和事件的bug修复及功能补全，请尽快迁移到新版本的接口和事件上。
-
 ## API文档
 
 完整api和类型声明请参考[typedoc](https://github.com/tvfe/txv-miniprogram-plugin/tree/master/public/typedoc)
+
+
+
 ### 常用api
 下面是一些你经常会用到的api。
 #### 获取播放器实例
@@ -103,6 +110,21 @@ player.setLevel('fhd').catch(error => {
 ```
 > 如果切换失败的话可以通过catch捕获异常，播放器会自动续播当前内容。
 
+
+### 播放器支持的video标签事件
+```
+'play',
+'pause',
+'ended',
+'timeupdate',
+'waiting',
+'error',
+'progress',
+'loadedmetadata',
+'controlstoggle',
+'seekcomplete',
+'fullscreenchange',
+```
 
 ### 播放器支持的video标签属性
 ```ts
