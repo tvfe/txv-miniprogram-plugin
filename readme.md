@@ -63,7 +63,7 @@ const store = requirePlugin('player')
 #### 获取播放器实例
 ``` js
 const store = requirePlugin('player')
-// index.wxml 中 <video id="tvp-id" playerId="tvp">
+// index.wxml 中 <video id="tvp-id" playerid="tvp">
 const player = store.get('tvp');
 // 或
 const player = this.selectComponent('#tvp-id');
